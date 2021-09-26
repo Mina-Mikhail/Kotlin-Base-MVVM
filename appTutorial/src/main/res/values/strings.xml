@@ -1,0 +1,5 @@
+<resources>
+  <string name="dot" translatable="false">•</string>
+  <string name="open_app">Explore App</string>
+  <string name="next">Next</string>
+</resources>

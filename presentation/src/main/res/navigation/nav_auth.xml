@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_auth"
+    app:startDestination="@id/log_in_fragment">
+
+  <fragment
+      android:id="@+id/log_in_fragment"
+      android:name="com.mina_mikhail.base_mvvm.presentation.auth.log_in.LogInFragment"
+      tools:layout="@layout/fragment_log_in">
+
+    <action
+        android:id="@+id/action_open_sign_up_fragment"
+        app:destination="@id/sign_up_fragment"
+        app:enterAnim="@anim/anim_slide_in_right"
+        app:exitAnim="@anim/anim_slide_out_left"
+        app:popEnterAnim="@anim/anim_slide_in_left"
+        app:popExitAnim="@anim/anim_slide_out_right" />
+
+    <action
+        android:id="@+id/action_open_forgot_password_fragment"
+        app:destination="@id/forgot_password_fragment"
+        app:enterAnim="@anim/anim_slide_in_right"
+        app:exitAnim="@anim/anim_slide_out_left"
+        app:popEnterAnim="@anim/anim_slide_in_left"
+        app:popExitAnim="@anim/anim_slide_out_right" />
+
+  </fragment>
+
+  <fragment
+      android:id="@+id/sign_up_fragment"
+      android:name="com.mina_mikhail.base_mvvm.presentation.auth.sign_up.SignUpFragment"
+      tools:layout="@layout/fragment_sign_up" />
+
+  <fragment
+      android:id="@+id/forgot_password_fragment"
+      android:name="com.mina_mikhail.base_mvvm.presentation.auth.forgot_password.ForgotPasswordFragment"
+      tools:layout="@layout/fragment_forgot_password" />
+
+</navigation>

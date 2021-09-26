@@ -1,0 +1,62 @@
+<resources>
+  <dimen name="activity_padding">16dp</dimen>
+
+  <dimen name="dimen1">1dp</dimen>
+  <dimen name="dimen2">2dp</dimen>
+  <dimen name="dimen3">3dp</dimen>
+  <dimen name="dimen4">4dp</dimen>
+  <dimen name="dimen5">5dp</dimen>
+  <dimen name="dimen6">6dp</dimen>
+  <dimen name="dimen7">7dp</dimen>
+  <dimen name="dimen8">8dp</dimen>
+  <dimen name="dimen9">9dp</dimen>
+  <dimen name="dimen10">10dp</dimen>
+  <dimen name="dimen12">12dp</dimen>
+  <dimen name="dimen13">13dp</dimen>
+  <dimen name="dimen14">14dp</dimen>
+  <dimen name="dimen16">16dp</dimen>
+  <dimen name="dimen18">18dp</dimen>
+  <dimen name="dimen20">20dp</dimen>
+  <dimen name="dimen21">21dp</dimen>
+  <dimen name="dimen24">24dp</dimen>
+  <dimen name="dimen25">25dp</dimen>
+  <dimen name="dimen26">25dp</dimen>
+  <dimen name="dimen28">28dp</dimen>
+  <dimen name="dimen30">30dp</dimen>
+  <dimen name="dimen32">32dp</dimen>
+  <dimen name="dimen34">34dp</dimen>
+  <dimen name="dimen36">36dp</dimen>
+  <dimen name="dimen40">40dp</dimen>
+  <dimen name="dimen45">45dp</dimen>
+  <dimen name="dimen46">46dp</dimen>
+  <dimen name="dimen50">50dp</dimen>
+  <dimen name="dimen56">56dp</dimen>
+  <dimen name="dimen60">60dp</dimen>
+  <dimen name="dimen65">65dp</dimen>
+  <dimen name="dimen70">70dp</dimen>
+  <dimen name="dimen80">80dp</dimen>
+  <dimen name="dimen90">90dp</dimen>
+  <dimen name="dimen100">100dp</dimen>
+  <dimen name="dimen110">110dp</dimen>
+  <dimen name="dimen120">120dp</dimen>
+  <dimen name="dimen130">130dp</dimen>
+  <dimen name="dimen150">150dp</dimen>
+  <dimen name="dimen180">180dp</dimen>
+  <dimen name="dimen200">200dp</dimen>
+  <dimen name="dimen220">220dp</dimen>
+  <dimen name="dimen250">250dp</dimen>
+  <dimen name="dimen300">300dp</dimen>
+  <dimen name="dimen350">350dp</dimen>
+
+  <dimen name="text_size12">12sp</dimen>
+  <dimen name="text_size13">13sp</dimen>
+  <dimen name="text_size14">14sp</dimen>
+  <dimen name="text_size15">15sp</dimen>
+  <dimen name="text_size16">16sp</dimen>
+  <dimen name="text_size18">18sp</dimen>
+  <dimen name="text_size20">20sp</dimen>
+  <dimen name="text_size22">22sp</dimen>
+  <dimen name="text_size28">28sp</dimen>
+  <dimen name="text_size30">30sp</dimen>
+
+</resources>

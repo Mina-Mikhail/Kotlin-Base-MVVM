@@ -1,0 +1,13 @@
+<resources>
+  <dimen name="dimen3">3dp</dimen>
+  <dimen name="dimen4">4dp</dimen>
+  <dimen name="dimen7">7dp</dimen>
+  <dimen name="dimen10">10dp</dimen>
+  <dimen name="dimen16">16dp</dimen>
+  <dimen name="dimen30">30dp</dimen>
+  <dimen name="dimen50">50dp</dimen>
+
+  <dimen name="text_size13">13sp</dimen>
+  <dimen name="text_size14">14sp</dimen>
+  <dimen name="text_size16">16sp</dimen>
+</resources>

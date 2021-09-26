@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+  <data>
+    <variable
+        name="viewModel"
+        type="com.mina_mikhail.base_mvvm.presentation.intro.intro.IntroViewModel"
+        />
+  </data>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:padding="@dimen/activity_padding"
+      android:layout_height="match_parent"
+      android:background="@color/backgroundGray"
+      android:gravity="center"
+      android:orientation="vertical"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen50"
+        android:gravity="center"
+        android:orientation="horizontal"
+        tools:ignore="UseCompoundDrawables"
+        >
+
+      <ImageView
+          android:layout_width="@dimen/dimen40"
+          android:layout_height="@dimen/dimen40"
+          android:layout_marginEnd="@dimen/dimen5"
+          app:srcCompat="@drawable/ic_app_logo"
+          tools:ignore="ContentDescription"
+          />
+
+      <TextView
+          style="@style/TextBoldFont"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginStart="@dimen/dimen5"
+          android:text="@string/app_name"
+          android:textColor="@color/colorPrimaryDark"
+          android:textSize="@dimen/text_size28"
+          />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/TextMediumFont"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen50"
+        android:layout_marginTop="@dimen/dimen50"
+        android:layout_marginBottom="@dimen/dimen50"
+        android:background="@drawable/btn_accent"
+        android:gravity="center"
+        android:onClick="@{() -> viewModel.onLogInClicked()}"
+        android:text="@string/log_in_sign_up"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size16"
+        />
+
+    <TextView
+        android:id="@+id/btn_guest_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen50"
+        android:gravity="center"
+        android:textColor="@color/darkGray"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?selectableItemBackground"
+        android:padding="@dimen/dimen2"
+        android:textSize="@dimen/text_size13"
+        />
+
+  </LinearLayout>
+
+</layout>

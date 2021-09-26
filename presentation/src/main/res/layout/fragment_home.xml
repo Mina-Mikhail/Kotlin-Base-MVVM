@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <data>
+    <variable
+        name="viewModel"
+        type="com.mina_mikhail.base_mvvm.presentation.home.HomeViewModel"
+        />
+  </data>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/backgroundGray"
+      android:orientation="vertical"
+      >
+
+    <include
+        android:id="@+id/included_toolbar"
+        layout="@layout/toolbar_white"
+        />
+
+    <TextView
+        style="@style/TextMediumFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dimen36"
+        android:background="@drawable/btn_accent"
+        android:id="@+id/btn_show_action_chooser_pop_up"
+        android:gravity="center"
+        android:paddingStart="@dimen/dimen20"
+        android:paddingTop="@dimen/dimen7"
+        android:paddingEnd="@dimen/dimen20"
+        android:paddingBottom="@dimen/dimen7"
+        android:text="Show Action Chooser Pop Up"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size16"
+        />
+
+    <TextView
+        style="@style/TextMediumFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dimen36"
+        android:background="@drawable/btn_accent"
+        android:id="@+id/btn_show_pretty_pop_up"
+        android:gravity="center"
+        android:paddingStart="@dimen/dimen20"
+        android:paddingTop="@dimen/dimen7"
+        android:paddingEnd="@dimen/dimen20"
+        android:paddingBottom="@dimen/dimen7"
+        android:text="Show Pretty Pop Up"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size16"
+        />
+
+    <TextView
+        style="@style/TitleBoldFont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/home"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size20"
+        />
+
+  </LinearLayout>
+
+</layout>

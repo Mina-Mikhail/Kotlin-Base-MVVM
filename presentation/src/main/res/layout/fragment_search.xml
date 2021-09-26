@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <data>
+    <variable
+        name="viewModel"
+        type="com.mina_mikhail.base_mvvm.presentation.search.SearchViewModel"
+        />
+  </data>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/backgroundGray"
+      android:orientation="vertical"
+      >
+
+    <include
+        android:id="@+id/included_toolbar"
+        layout="@layout/toolbar_white"
+        />
+
+    <TextView
+        style="@style/TitleBoldFont"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="@string/search"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size20"
+        />
+
+  </LinearLayout>
+
+</layout>

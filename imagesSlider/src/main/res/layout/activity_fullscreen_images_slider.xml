@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      >
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/slider_pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/black"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_thumbnails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen5"
+        android:scrollbars="none"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_thumbnail"
+        />
+
+  </LinearLayout>
+
+  <ImageView
+      android:id="@+id/btn_back"
+      android:layout_width="@dimen/dimen36"
+      android:layout_height="@dimen/dimen36"
+      android:layout_margin="@dimen/activity_padding"
+      android:background="?attr/selectableItemBackgroundBorderless"
+      android:clickable="true"
+      android:focusable="true"
+      android:padding="@dimen/dimen4"
+      app:srcCompat="@drawable/ic_back"
+      app:tint="@color/white"
+      tools:ignore="ContentDescription"
+      />
+
+</FrameLayout>

@@ -1,0 +1,21 @@
+<resources>
+
+  <style name="PrettyDialogBoldFont">
+    <item name="android:textSize">@dimen/text_size16</item>
+    <item name="fontFamily">@font/poppins_bold</item>
+  </style>
+
+  <style name="PrettyDialogRegularFont">
+    <item name="android:textSize">@dimen/text_size14</item>
+    <item name="fontFamily">@font/poppins_light</item>
+  </style>
+
+  <style name="PrettyDialogAnimation" parent="Theme.MaterialComponents.DayNight.Dialog.Bridge">
+    <item name="android:windowNoTitle">true</item>
+    <item name="colorPrimaryDark">@color/colorDarkGray</item>
+    <item name="colorPrimary">@color/colorGray</item>
+
+    <item name="android:windowActivityTransitions">true</item>
+  </style>
+
+</resources>

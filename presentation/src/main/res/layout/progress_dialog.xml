@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/bg_rounded_white"
+    android:elevation="4dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="@dimen/dimen24"
+    tools:targetApi="lollipop"
+    >
+
+  <com.github.ybq.android.spinkit.SpinKitView
+      android:id="@+id/loading"
+      style="@style/SpinKitView.Large.Wave"
+      android:layout_width="@dimen/dimen60"
+      android:layout_height="@dimen/dimen60"
+      android:layout_gravity="center"
+      app:SpinKit_Color="@color/colorPrimary"
+      />
+
+  <TextView
+      android:id="@+id/tv_hint"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/dimen7"
+      android:gravity="center"
+      android:textColor="@color/black"
+      android:visibility="gone"
+      />
+
+</LinearLayout>

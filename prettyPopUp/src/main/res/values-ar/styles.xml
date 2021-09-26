@@ -1,0 +1,13 @@
+<resources>
+
+  <style name="PrettyDialogBoldFont">
+    <item name="android:textSize">@dimen/text_size16</item>
+    <item name="fontFamily">@font/almarai_bold</item>
+  </style>
+
+  <style name="PrettyDialogRegularFont">
+    <item name="android:textSize">@dimen/text_size14</item>
+    <item name="fontFamily">@font/almarai_light</item>
+  </style>
+
+</resources>

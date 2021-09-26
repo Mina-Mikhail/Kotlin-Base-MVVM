@@ -1,0 +1,67 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+  <!-- Base application theme. -->
+  <style name="Theme.AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    <!-- Primary brand color. -->
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+    <item name="colorOnPrimary">@color/white</item>
+    <!-- Secondary brand color. -->
+    <item name="colorSecondary">@color/colorAccent</item>
+    <item name="colorSecondaryVariant">@color/colorAccentDark</item>
+    <item name="colorOnSecondary">@color/black</item>
+    <!-- Status bar color. -->
+    <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+
+    <!-- App Font -->
+    <item name="fontFamily">@font/poppins_light</item>
+
+    <item name="android:windowContentTransitions">true</item>
+
+    <item name="android:windowActionBarOverlay">true</item>
+  </style>
+
+  <style name="TextBoldFont">
+    <item name="android:textSize">@dimen/text_size16</item>
+    <item name="android:textStyle">bold</item>
+    <item name="fontFamily">@font/poppins_bold</item>
+  </style>
+
+  <style name="TitleBoldFont">
+    <item name="android:textSize">@dimen/text_size16</item>
+    <item name="android:textStyle">bold</item>
+    <item name="fontFamily">@font/syncopate_bold</item>
+  </style>
+
+  <style name="TextMediumFont">
+    <item name="android:textSize">@dimen/text_size14</item>
+    <item name="fontFamily">@font/poppins_medium</item>
+  </style>
+
+  <style name="TextRegularFont">
+    <item name="android:textSize">@dimen/text_size14</item>
+    <item name="fontFamily">@font/poppins_light</item>
+  </style>
+
+  <style name="TitleRegularFont">
+    <item name="android:textSize">@dimen/text_size14</item>
+    <item name="fontFamily">@font/syncopate_regular</item>
+  </style>
+
+  <style name="ArabicTextRegularFont">
+    <item name="android:textSize">@dimen/text_size14</item>
+    <item name="fontFamily">@font/almarai_medium</item>
+  </style>
+
+  <style name="CustomDialogAnimation" parent="Theme.MaterialComponents.DayNight.Dialog.Bridge">
+    <item name="android:windowNoTitle">true</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorPrimary">@color/colorPrimary</item>
+
+    <item name="android:windowActivityTransitions">true</item>
+
+    <!-- Additionally if you want animations when dialog opening -->
+    <!--    <item name="android:windowEnterAnimation">@anim/slide_up</item>-->
+    <!--    <item name="android:windowExitAnimation">@anim/slide_down</item>-->
+  </style>
+
+</resources>

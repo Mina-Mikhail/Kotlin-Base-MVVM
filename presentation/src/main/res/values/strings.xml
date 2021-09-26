@@ -1,0 +1,43 @@
+<resources>
+  <string name="app_name" translatable="false">Base MVVM</string>
+
+  <!-- General Strings -->
+  <string name="hide">Hide</string>
+  <string name="connection_error">Connection Error</string>
+  <string name="no_internet">No internet connection please try again later</string>
+  <string name="retry">Retry</string>
+  <string name="cancel">Cancel</string>
+  <string name="some_error">Some error occurred, try again later</string>
+  <string name="list_no_result">Sorry, There are no results here!</string>
+
+  <!-- Home -->
+  <string name="home">Home</string>
+  <string name="search">Search</string>
+  <string name="account">Account</string>
+
+  <!-- Tutorial -->
+  <string name="tutorial">Tutorial</string>
+
+  <!-- Intro -->
+  <string name="log_in_sign_up">Log In / Sign Up</string>
+
+  <!-- Log In -->
+  <string name="log_in">Log In</string>
+  <string name="email">Email Address</string>
+  <string name="password">Password</string>
+  <string name="forgot_your_password">Forgot your password?</string>
+  <string name="not_have_account">Don\'t have an account?</string>
+  <string name="empty_email">Please enter your email address</string>
+  <string name="empty_password">Please enter your password</string>
+
+  <!-- Sign Up -->
+  <string name="sign_up">Sign Up</string>
+
+  <!-- Account -->
+  <string name="log_out">Log Out</string>
+  <string name="log_out_hint">Are you sure you want to log out?</string>
+  <string name="skip">Skip</string>
+  <string name="explore_app">Need to explore app features?</string>
+  <string name="continue_as_guest">Continue as Guest</string>
+
+</resources>

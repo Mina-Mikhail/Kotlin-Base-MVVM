@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+  <data>
+    <variable
+        name="viewModel"
+        type="com.mina_mikhail.base_mvvm.presentation.auth.log_in.LogInViewModel"
+        />
+  </data>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/white"
+      android:orientation="vertical"
+      android:padding="@dimen/activity_padding"
+      >
+
+    <TextView
+        style="@style/TextMediumFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen20"
+        android:layout_marginBottom="@dimen/dimen50"
+        android:gravity="center"
+        android:text="@string/log_in"
+        android:textAllCaps="true"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/text_size18"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none"
+        >
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:orientation="vertical"
+          >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen56"
+            android:layout_marginBottom="@dimen/dimen20"
+            android:background="@drawable/bg_white_with_stroke"
+            android:paddingStart="@dimen/dimen12"
+            android:paddingEnd="@dimen/dimen12"
+            >
+
+          <EditText
+              android:id="@+id/et_email"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:layout_gravity="center_vertical"
+              android:background="@color/transparent"
+              android:hint="@string/email"
+              android:imeOptions="actionNext"
+              android:inputType="textEmailAddress"
+              android:text="@={viewModel.request.email}"
+              android:textColor="@color/colorPrimary"
+              android:textColorHint="@color/gray"
+              android:textSize="@dimen/text_size14"
+              />
+
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen56"
+            android:layout_marginBottom="@dimen/dimen20"
+            android:background="@drawable/bg_white_with_stroke"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dimen12"
+            android:paddingEnd="@dimen/dimen12"
+            >
+
+          <EditText
+              android:id="@+id/et_password"
+              android:layout_width="0dp"
+              android:layout_height="wrap_content"
+              android:layout_marginEnd="@dimen/dimen10"
+              android:layout_weight="1"
+              android:background="@color/transparent"
+              android:hint="@string/password"
+              android:imeOptions="actionDone"
+              android:inputType="textPassword"
+              android:text="@={viewModel.request.password}"
+              android:textColor="@color/colorPrimary"
+              android:textColorHint="@color/gray"
+              android:textSize="@dimen/text_size14"
+              />
+
+          <ImageView
+              android:id="@+id/iv_password_toggle"
+              android:layout_width="@dimen/dimen26"
+              android:layout_height="@dimen/dimen26"
+              android:background="?selectableItemBackgroundBorderless"
+              android:clickable="true"
+              android:focusable="true"
+              android:onClick="@{() -> viewModel.onPasswordToggleClicked()}"
+              android:padding="@dimen/dimen2"
+              app:srcCompat="@drawable/ic_show_password"
+              app:tint="@color/colorPrimary"
+              tools:ignore="ContentDescription"
+              />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dimen20"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:onClick="@{() -> viewModel.onForgotPasswordClicked()}"
+            android:paddingTop="@dimen/dimen2"
+            android:paddingEnd="@dimen/dimen2"
+            android:paddingBottom="@dimen/dimen2"
+            android:text="@string/forgot_your_password"
+            android:textColor="@color/darkGray"
+            tools:ignore="RtlSymmetry"
+            />
+
+        <TextView
+            style="@style/TextMediumFont"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen50"
+            android:layout_marginBottom="@dimen/dimen36"
+            android:background="@drawable/btn_accent"
+            android:gravity="center"
+            android:onClick="@{() -> viewModel.onLogInClicked()}"
+            android:text="@string/log_in"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/text_size16"
+            />
+
+        <TextView
+            android:id="@+id/btn_sign_up"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="?selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="@dimen/dimen2"
+            android:textColor="@color/darkGray"
+            android:textSize="@dimen/text_size13"
+            />
+
+      </LinearLayout>
+
+    </ScrollView>
+
+  </LinearLayout>
+
+</layout>

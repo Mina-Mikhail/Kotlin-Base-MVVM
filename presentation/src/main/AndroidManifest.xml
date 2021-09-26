@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest package="com.mina_mikhail.base_mvvm.presentation"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <application android:theme="@style/Theme.AppTheme" />
+
+</manifest>

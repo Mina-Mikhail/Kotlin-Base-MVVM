@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+  <data>
+    <variable
+        name="viewModel"
+        type="com.mina_mikhail.base_mvvm.presentation.shared.web_view.WebViewViewModel"
+        />
+  </data>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:background="@color/backgroundGray"
+      android:orientation="vertical"
+      >
+
+    <include
+        android:id="@+id/included_toolbar"
+        layout="@layout/toolbar_transparent"
+        />
+
+    <WebView
+        android:id="@+id/web_view"
+        android:layout_width="match_parent"
+        android:padding="@dimen/dimen10"
+        android:clipToPadding="false"
+        android:layout_height="match_parent"
+        />
+
+  </LinearLayout>
+
+</layout>

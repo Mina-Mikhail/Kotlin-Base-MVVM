@@ -1,0 +1,41 @@
+<resources>
+  <!-- General Strings -->
+  <string name="hide">اخفاء</string>
+  <string name="connection_error">خطأ فى الاتصال</string>
+  <string name="no_internet">لا يوجد اتصال بالانترنت، برجاء المحاولة فى وقت لاحق</string>
+  <string name="retry">إعادة المحاولة</string>
+  <string name="cancel">إلغاء</string>
+  <string name="some_error">حدث خطأ ما، برجاء المحاولة فى وقت لاحق</string>
+  <string name="list_no_result">عفواً، لا يوجد بيانات</string>
+
+  <!-- Home -->
+  <string name="home">الرئيسية</string>
+  <string name="search">البحث</string>
+  <string name="account">حسابى</string>
+
+  <!-- Tutorial -->
+  <string name="tutorial">شرح التطبيق</string>
+
+  <!-- Intro -->
+  <string name="log_in_sign_up">تسجيل الدخول/انشاء حساب</string>
+
+  <!-- Log In -->
+  <string name="log_in">تسجيل الدخول</string>
+  <string name="email">البريد الالكترونى</string>
+  <string name="password">كلمة المرور</string>
+  <string name="forgot_your_password">نسيت كلمة المرور؟</string>
+  <string name="not_have_account">ليس لديك حساب؟</string>
+  <string name="empty_email">برجاء ادخال البريد الالكترونى الخاص بك</string>
+  <string name="empty_password">برجاء ادخال كلمة المرور</string>
+
+  <!-- Sign Up -->
+  <string name="sign_up">انشاء حساب</string>
+
+  <!-- Account -->
+  <string name="log_out">تسجيل الخروج</string>
+  <string name="log_out_hint">هل انت متأكد من انك تريد تسجيل الخروج؟</string>
+  <string name="skip">تخطى</string>
+  <string name="explore_app">تريد تصفح خدمات التطبيق</string>
+  <string name="continue_as_guest">المتابعة كضيف</string>
+
+</resources>

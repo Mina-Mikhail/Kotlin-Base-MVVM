@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_intro"
+    app:startDestination="@id/tutorial_fragment">
+
+  <fragment
+      android:id="@+id/tutorial_fragment"
+      android:name="com.mina_mikhail.base_mvvm.presentation.intro.tutorial.TutorialFragment"
+      tools:layout="@layout/fragment_tutorial">
+
+    <action
+        android:id="@+id/action_open_intro_fragment"
+        app:destination="@id/intro_fragment"
+        app:enterAnim="@anim/anim_slide_in_top"
+        app:exitAnim="@anim/anim_slide_out_bottom"
+        app:popEnterAnim="@anim/anim_slide_in_bottom"
+        app:popExitAnim="@anim/anim_slide_out_top" />
+
+  </fragment>
+
+  <fragment
+      android:id="@+id/intro_fragment"
+      android:name="com.mina_mikhail.base_mvvm.presentation.intro.intro.IntroFragment"
+      tools:layout="@layout/fragment_intro" />
+
+</navigation>

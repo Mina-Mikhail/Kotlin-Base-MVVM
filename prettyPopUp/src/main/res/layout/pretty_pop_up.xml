@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="@dimen/dimen350"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    >
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/dimen16"
+      android:background="@drawable/bg_pretty_pop_up"
+      android:elevation="3dp"
+      android:orientation="vertical"
+      android:padding="@dimen/dimen16"
+      tools:ignore="UselessParent"
+      tools:targetApi="lollipop"
+      >
+
+    <TextView
+        android:id="@+id/tv_title"
+        style="@style/PrettyDialogBoldFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen12"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textSize="@dimen/text_size16"
+        tools:text="Popup Title"
+        />
+
+    <ImageView
+        android:id="@+id/iv_image"
+        android:layout_width="@dimen/dimen150"
+        android:layout_height="@dimen/dimen150"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="@dimen/dimen16"
+        android:visibility="gone"
+        tools:ignore="ContentDescription"
+        />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        style="@style/PrettyDialogRegularFont"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen16"
+        android:gravity="center"
+        android:textColor="@color/colorGray"
+        tools:text="Popup Content Message"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        >
+
+      <TextView
+          android:id="@+id/negative_btn_style_1"
+          style="@style/PrettyDialogBoldFont"
+          android:layout_width="0dp"
+          android:layout_height="@dimen/dimen40"
+          android:layout_margin="@dimen/dimen3"
+          android:layout_weight="1"
+          android:background="@drawable/btn_action_negative"
+          android:clickable="true"
+          android:focusable="true"
+          android:gravity="center"
+          android:textAllCaps="false"
+          android:textColor="@color/colorBlack"
+          android:textSize="@dimen/text_size13"
+          android:visibility="gone"
+          tools:text="Cancel"
+          />
+
+      <TextView
+          android:id="@+id/positive_btn_style_1"
+          style="@style/PrettyDialogBoldFont"
+          android:layout_width="0dp"
+          android:layout_height="@dimen/dimen40"
+          android:layout_margin="@dimen/dimen3"
+          android:layout_weight="2"
+          android:background="@drawable/btn_action_positive"
+          android:gravity="center"
+          android:textAllCaps="false"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/text_size13"
+          android:visibility="gone"
+          tools:text="Done"
+          />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        >
+
+      <TextView
+          android:id="@+id/negative_btn_style_2"
+          style="@style/PrettyDialogBoldFont"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/dimen40"
+          android:layout_margin="@dimen/dimen5"
+          android:background="@drawable/btn_action_negative"
+          android:clickable="true"
+          android:focusable="true"
+          android:gravity="center"
+          android:textAllCaps="false"
+          android:textColor="@color/colorBlack"
+          android:textSize="@dimen/text_size13"
+          android:visibility="gone"
+          tools:text="Cancel"
+          />
+
+      <TextView
+          android:id="@+id/positive_btn_style_2"
+          style="@style/PrettyDialogBoldFont"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/dimen40"
+          android:layout_margin="@dimen/dimen5"
+          android:background="@drawable/btn_action_positive"
+          android:gravity="center"
+          android:textAllCaps="false"
+          android:textColor="@color/colorWhite"
+          android:textSize="@dimen/text_size13"
+          android:visibility="gone"
+          tools:text="Done"
+          />
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+</LinearLayout>

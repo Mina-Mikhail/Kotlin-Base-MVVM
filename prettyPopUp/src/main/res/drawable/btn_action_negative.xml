@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:color="@color/colorWhite"
+    tools:targetApi="kitkat">
+  <item android:id="@android:id/mask">
+    <shape android:shape="rectangle">
+      <corners android:radius="@dimen/dimen7" />
+      <solid android:color="@color/colorWhite" />
+    </shape>
+  </item>
+
+  <item>
+    <shape android:shape="rectangle">
+      <corners android:radius="@dimen/dimen7" />
+      <solid android:color="@color/colorGray" />
+    </shape>
+  </item>
+</ripple>

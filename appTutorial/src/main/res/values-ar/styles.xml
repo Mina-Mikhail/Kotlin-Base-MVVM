@@ -1,0 +1,13 @@
+<resources>
+
+  <style name="TutorialTitleFont">
+    <item name="android:textSize">@dimen/tutorial_title</item>
+    <item name="fontFamily">@font/almarai_bold</item>
+  </style>
+
+  <style name="TutorialContentFont">
+    <item name="android:textSize">@dimen/tutorial_content</item>
+    <item name="fontFamily">@font/almarai_light</item>
+  </style>
+
+</resources>

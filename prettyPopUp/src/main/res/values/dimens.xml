@@ -1,0 +1,15 @@
+<resources>
+  <dimen name="dimen3">3dp</dimen>
+  <dimen name="dimen5">5dp</dimen>
+  <dimen name="dimen7">7dp</dimen>
+  <dimen name="dimen40">40dp</dimen>
+  <dimen name="dimen12">12dp</dimen>
+  <dimen name="dimen16">16dp</dimen>
+  <dimen name="dimen150">150dp</dimen>
+  <dimen name="dimen350">350dp</dimen>
+
+  <dimen name="text_size12">12sp</dimen>
+  <dimen name="text_size13">13sp</dimen>
+  <dimen name="text_size14">14sp</dimen>
+  <dimen name="text_size16">16sp</dimen>
+</resources>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+  <data>
+    <variable
+        name="baseViewModel"
+        type="com.mina_mikhail.base_mvvm.presentation.base.BaseViewModel"
+        />
+
+    <import type="com.mina_mikhail.base_mvvm.domain.enums.DataStatus" />
+
+    <import type="android.view.View" />
+  </data>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:gravity="center"
+      android:orientation="vertical"
+      >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:goneUnless="@{baseViewModel.dataLoadingEvent ==  DataStatus.NO_DATA}"
+        tools:ignore="UseCompoundDrawables"
+        >
+
+      <ImageView
+          android:layout_width="@dimen/dimen200"
+          android:layout_height="@dimen/dimen200"
+          app:srcCompat="@drawable/bg_no_data"
+          tools:ignore="ContentDescription"
+          />
+
+      <TextView
+          style="@style/TextMediumFont"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/dimen6"
+          android:gravity="center"
+          android:text="@string/list_no_result"
+          android:textColor="@color/black"
+          />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:goneUnless="@{baseViewModel.dataLoadingEvent ==  DataStatus.NO_INTERNET}"
+        tools:ignore="UseCompoundDrawables"
+        >
+
+      <ImageView
+          android:layout_width="@dimen/dimen200"
+          android:layout_height="@dimen/dimen200"
+          android:layout_marginBottom="@dimen/dimen5"
+          app:srcCompat="@drawable/bg_no_internet"
+          tools:ignore="ContentDescription"
+          />
+
+      <TextView
+          style="@style/TextMediumFont"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_margin="@dimen/dimen6"
+          android:gravity="center"
+          android:text="@string/no_internet"
+          android:textColor="@color/black"
+          />
+
+    </LinearLayout>
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        style="@style/SpinKitView.Large.DoubleBounce"
+        android:layout_width="@dimen/dimen70"
+        android:layout_height="@dimen/dimen70"
+        android:layout_gravity="center"
+        app:SpinKit_Color="@color/colorPrimary"
+        app:goneUnless="@{baseViewModel.dataLoadingEvent ==  DataStatus.LOADING}"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:padding="@dimen/dimen10"
+        app:goneUnless="@{baseViewModel.dataLoadingEvent == DataStatus.SHOW_DATA || baseViewModel.dataLoadingEvent == DataStatus.LOADING_NEXT_PAGE}"
+        />
+
+    <com.github.ybq.android.spinkit.SpinKitView
+        style="@style/SpinKitView.Large.Wave"
+        android:layout_width="@dimen/dimen50"
+        android:layout_height="@dimen/dimen50"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/dimen12"
+        app:SpinKit_Color="@color/colorPrimary"
+        app:goneUnless="@{baseViewModel.dataLoadingEvent == DataStatus.LOADING_NEXT_PAGE}"
+        />
+
+  </LinearLayout>
+
+</layout>

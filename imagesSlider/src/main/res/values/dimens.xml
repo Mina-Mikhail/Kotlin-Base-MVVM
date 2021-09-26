@@ -1,0 +1,8 @@
+<resources>
+  <dimen name="activity_padding">16dp</dimen>
+  <dimen name="dimen4">4dp</dimen>
+  <dimen name="dimen5">5dp</dimen>
+  <dimen name="dimen36">36dp</dimen>
+  <dimen name="dimen50">50dp</dimen>
+  <dimen name="dimen60">60dp</dimen>
+</resources>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_shared"
+    app:startDestination="@id/web_view_fragment">
+
+  <fragment
+      android:id="@+id/web_view_fragment"
+      android:name="com.mina_mikhail.base_mvvm.presentation.shared.web_view.WebViewFragment"
+      tools:layout="@layout/fragment_web_view">
+
+    <argument
+        android:name="htmlContent"
+        app:argType="string"
+        app:nullable="true" />
+  </fragment>
+
+</navigation>
