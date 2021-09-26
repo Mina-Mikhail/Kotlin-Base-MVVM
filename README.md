@@ -2,7 +2,7 @@ Android Clean Architecture
 =========================
 
 
-Clean architecture:
+Clean Architecture:
 -----------------
 ![http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture/clean_architecture.png)
 
@@ -22,6 +22,7 @@ Architecture:
 - Repository pattern.
 - Applying SOLID principles, each class has a single job with separation of concerns by making classes independent
   of each other and communicating with interfaces.
+- Using Kotlin-DSL & buildSrc to handle project dependencies.
 
 
 Tech stack & Libraries:
@@ -34,7 +35,7 @@ Tech stack & Libraries:
 - Kotlin Coroutines - for managing background threads with simplified code and reducing needs for callbacks
 - Retrofit2 & OkHttp3 - to make REST requests to the web service integrated.
 - Coil - for image loading.
-- Material Bottom Navigation - to handle bottom tabs with support for multiple backstacks.
+- Material Bottom Navigation - to handle bottom tabs with support for multiple backStack.
 
 
 Project Structure:
