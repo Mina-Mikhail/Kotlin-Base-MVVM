@@ -4,11 +4,7 @@ import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import com.mina_mikhail.base_mvvm.domain.utils.BaseResponse
 import com.mina_mikhail.base_mvvm.domain.utils.ErrorResponse
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.API_FAIL
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.NO_INTERNET
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.OTHER
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.SERVER_SIDE_EXCEPTION
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.TOKEN_EXPIRED
+import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.*
 import com.mina_mikhail.base_mvvm.domain.utils.Resource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -25,16 +21,7 @@ open class BaseRemoteDataSource @Inject constructor() {
       try {
         val apiResponse: T = apiCall.invoke()
 
-        if ((apiResponse as BaseResponse<*>).validationErrors != null
-          && (apiResponse as BaseResponse<*>).validationErrors?.isNotEmpty() == true
-        ) {
-          var validationErrors = ""
-          (apiResponse as BaseResponse<*>).validationErrors?.forEach {
-            validationErrors += "${it.errorMessage} \n"
-          }
-
-          Resource.Failure(API_FAIL, 200, validationErrors)
-        } else if ((apiResponse as BaseResponse<*>).result == null) {
+        if ((apiResponse as BaseResponse<*>).result == null) {
           Resource.Empty
         } else if ((apiResponse as BaseResponse<*>).result is List<*>) {
           if ((apiResponse.result as List<*>).isNotEmpty()) {

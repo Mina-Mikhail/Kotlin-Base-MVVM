@@ -23,12 +23,12 @@ object Config {
     const val androidApplication = "com.android.application"
     const val kotlinAndroid = "kotlin-android"
     const val kotlinKapt = "kotlin-kapt"
-    const val kotlinParcelize = "kotlin-parcelize"
     const val navigationSafeArgs = "androidx.navigation.safeargs"
     const val hilt = "dagger.hilt.android.plugin"
     const val googleServices = "com.google.gms.google-services"
     const val crashlytics = "com.google.firebase.crashlytics"
     const val androidLibrary = "com.android.library"
+    const val kotlinJvm = "org.jetbrains.kotlin.jvm"
   }
 
   object Modules {
