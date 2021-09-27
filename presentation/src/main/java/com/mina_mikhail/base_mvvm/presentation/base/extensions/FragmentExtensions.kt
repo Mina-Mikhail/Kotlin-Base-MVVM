@@ -6,12 +6,10 @@ import androidx.annotation.ColorRes
 import androidx.annotation.DrawableRes
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavDirections
+import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.API_FAIL
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.NO_INTERNET
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.OTHER
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.SERVER_SIDE_EXCEPTION
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.TOKEN_EXPIRED
+import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.*
 import com.mina_mikhail.base_mvvm.domain.utils.Resource.Failure
 import com.mina_mikhail.base_mvvm.presentation.R
 import com.mina_mikhail.base_mvvm.presentation.base.utils.hideSoftInput
@@ -96,4 +94,12 @@ fun Fragment.onBackPressedCustomAction(action: () -> Unit) {
       action()
     }
   })
+}
+
+fun Fragment.navigateSafe(directions: NavDirections, navOptions: NavOptions? = null) {
+  findNavController().navigate(directions, navOptions)
+}
+
+fun Fragment.backToPreviousScreen() {
+  findNavController().navigateUp()
 }

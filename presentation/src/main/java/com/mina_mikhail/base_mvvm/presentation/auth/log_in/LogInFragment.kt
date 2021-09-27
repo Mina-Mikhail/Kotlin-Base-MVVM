@@ -13,19 +13,11 @@ import android.text.style.UnderlineSpan
 import android.view.View
 import android.widget.TextView.BufferType.SPANNABLE
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import com.mina_mikhail.base_mvvm.domain.auth.enums.AuthFieldsValidation
-import com.mina_mikhail.base_mvvm.domain.utils.Resource.Failure
-import com.mina_mikhail.base_mvvm.domain.utils.Resource.Loading
-import com.mina_mikhail.base_mvvm.domain.utils.Resource.Success
+import com.mina_mikhail.base_mvvm.domain.utils.Resource.*
 import com.mina_mikhail.base_mvvm.presentation.R
 import com.mina_mikhail.base_mvvm.presentation.base.BaseFragment
-import com.mina_mikhail.base_mvvm.presentation.base.extensions.getMyColor
-import com.mina_mikhail.base_mvvm.presentation.base.extensions.getMyDrawable
-import com.mina_mikhail.base_mvvm.presentation.base.extensions.handleApiError
-import com.mina_mikhail.base_mvvm.presentation.base.extensions.hideKeyboard
-import com.mina_mikhail.base_mvvm.presentation.base.extensions.openActivityAndClearStack
-import com.mina_mikhail.base_mvvm.presentation.base.extensions.showSnackBar
+import com.mina_mikhail.base_mvvm.presentation.base.extensions.*
 import com.mina_mikhail.base_mvvm.presentation.base.utils.showSoftInput
 import com.mina_mikhail.base_mvvm.presentation.databinding.FragmentLogInBinding
 import com.mina_mikhail.base_mvvm.presentation.home.HomeActivity
@@ -148,11 +140,11 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>() {
   }
 
   private fun openForgotPassword() {
-    findNavController().navigate(R.id.action_open_forgot_password_fragment)
+    navigateSafe(LogInFragmentDirections.actionOpenForgotPasswordFragment())
   }
 
   private fun openSignUp() {
-    findNavController().navigate(R.id.action_open_sign_up_fragment)
+    navigateSafe(LogInFragmentDirections.actionOpenSignUpFragment())
   }
 
   private fun openHome() {

@@ -1,12 +1,12 @@
 package com.mina_mikhail.base_mvvm.presentation.intro.tutorial
 
 import androidx.fragment.app.viewModels
-import androidx.navigation.fragment.findNavController
 import codes.mina_mikhail.app_tutorial.AppTutorial
 import codes.mina_mikhail.app_tutorial.AppTutorialHelper
 import com.mina_mikhail.base_mvvm.presentation.R
 import com.mina_mikhail.base_mvvm.presentation.base.BaseFragment
 import com.mina_mikhail.base_mvvm.presentation.base.extensions.getMyDrawable
+import com.mina_mikhail.base_mvvm.presentation.base.extensions.navigateSafe
 import com.mina_mikhail.base_mvvm.presentation.databinding.FragmentTutorialBinding
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -76,6 +76,6 @@ class TutorialFragment : BaseFragment<FragmentTutorialBinding>() {
   }
 
   private fun openIntro() {
-    findNavController().navigate(R.id.action_open_intro_fragment)
+    navigateSafe(TutorialFragmentDirections.actionOpenIntroFragment())
   }
 }
