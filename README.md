@@ -22,7 +22,7 @@ Architecture:
 - Repository pattern.
 - Applying SOLID principles, each class has a single job with separation of concerns by making classes independent
   of each other and communicating with interfaces.
-- Using Kotlin-DSL & buildSrc to handle project dependencies.
+- Using Kotlin-KTS & buildSrc to handle project dependencies.
 
 
 Tech stack & Libraries:
