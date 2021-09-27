@@ -62,6 +62,7 @@ dependencies {
   implementation(Libraries.playServices)
   implementation(Libraries.localization)
   implementation(Libraries.permissions)
+  implementation(Libraries.gson)
 
   // Hilt
   implementation(Libraries.hilt)
