@@ -63,6 +63,16 @@ Code style
 - Following official kotlin code style
 
 
+TO DO
+-----------
+- [ ] Use Flow instead of LiveData.
+- [ ] Use UseCases.
+- [ ] Handle Different Build Varient.
+- [ ] Explore full MVI implementation.
+- [ ] Add some unit tests.
+
+
+
 License
 --------
 
