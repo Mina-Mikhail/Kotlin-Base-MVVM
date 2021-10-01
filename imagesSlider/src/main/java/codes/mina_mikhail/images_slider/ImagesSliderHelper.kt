@@ -80,6 +80,8 @@ class ImagesSliderHelper private constructor(builder: Builder) : LifecycleObserv
     if (sliderContainerResourceID != 0 && sliderContainer == null) {
       sliderContainer = activity.findViewById(sliderContainerResourceID)
     }
+
+    sliderContainer?.removeAllViewsInLayout()
   }
 
   private fun addViewPager() {
