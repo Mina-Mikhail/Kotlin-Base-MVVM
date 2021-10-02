@@ -1,72 +1,72 @@
 plugins {
-  id(Config.Plugins.androidApplication)
-  id(Config.Plugins.kotlinAndroid)
-  id(Config.Plugins.kotlinKapt)
-  id(Config.Plugins.navigationSafeArgs)
-  id(Config.Plugins.hilt)
-  id(Config.Plugins.googleServices)
-  id(Config.Plugins.crashlytics)
+    id(Config.Plugins.androidApplication)
+    id(Config.Plugins.kotlinAndroid)
+    id(Config.Plugins.kotlinKapt)
+    id(Config.Plugins.navigationSafeArgs)
+    id(Config.Plugins.hilt)
+    id(Config.Plugins.googleServices)
+    id(Config.Plugins.crashlytics)
 }
 
 android {
-  compileSdk = Config.AppConfig.compileSdkVersion
+    compileSdk = Config.AppConfig.compileSdkVersion
 
-  defaultConfig {
-    applicationId = Config.AppConfig.appId
-    minSdk = Config.AppConfig.minSdkVersion
-    targetSdk = Config.AppConfig.compileSdkVersion
-    versionCode = Config.AppConfig.versionCode
-    versionName = Config.AppConfig.versionName
+    defaultConfig {
+        applicationId = Config.AppConfig.appId
+        minSdk = Config.AppConfig.minSdkVersion
+        targetSdk = Config.AppConfig.compileSdkVersion
+        versionCode = Config.AppConfig.versionCode
+        versionName = Config.AppConfig.versionName
 
-    vectorDrawables.useSupportLibrary = true
-    multiDexEnabled = true
-    testInstrumentationRunner = Config.AppConfig.testRunner
-  }
-
-  buildTypes {
-    getByName("debug") {
-      buildConfigField("String", "API_BASE_URL", Config.Environments.debugBaseUrl)
+        vectorDrawables.useSupportLibrary = true
+        multiDexEnabled = true
+        testInstrumentationRunner = Config.AppConfig.testRunner
     }
 
-    getByName("release") {
-      isMinifyEnabled = true
-      isShrinkResources = true
-      buildConfigField("String", "API_BASE_URL", Config.Environments.releaseBaseUrl)
-    }
-  }
+    buildTypes {
+        getByName("debug") {
+            buildConfigField("String", "API_BASE_URL", Config.Environments.debugBaseUrl)
+        }
 
-  dataBinding {
-    isEnabled = true
-  }
+        getByName("release") {
+            isMinifyEnabled = true
+            isShrinkResources = true
+            buildConfigField("String", "API_BASE_URL", Config.Environments.releaseBaseUrl)
+        }
+    }
+
+    dataBinding {
+        isEnabled = true
+    }
 }
 
 dependencies {
-  implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
+    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.jar"))))
 
-  // Networking
-  implementation(Libraries.retrofit)
-  implementation(Libraries.retrofitConverter)
-  implementation(Libraries.gson)
-  implementation(Libraries.interceptor)
-  implementation(Libraries.chuckLogging)
+    // Networking
+    implementation(Libraries.retrofit)
+    implementation(Libraries.retrofitConverter)
+    implementation(Libraries.gson)
+    implementation(Libraries.interceptor)
+    implementation(Libraries.chuckLogging)
 
-  // Firebase
-  implementation(Libraries.firebaseCore)
-  implementation(Libraries.firebaseMessaging)
-  implementation(Libraries.firebaseIID)
-  implementation(Libraries.crashlytics)
+    // Firebase
+    implementation(Libraries.firebaseCore)
+    implementation(Libraries.firebaseMessaging)
+    implementation(Libraries.firebaseIID)
+    implementation(Libraries.crashlytics)
 
-  // Utils
-  implementation(Libraries.playServices)
-  implementation(Libraries.localization)
-  implementation(Libraries.multidex)
+    // Utils
+    implementation(Libraries.playServices)
+    implementation(Libraries.localization)
+    implementation(Libraries.multidex)
 
-  // Hilt
-  implementation(Libraries.hilt)
-  kapt(Libraries.hiltDaggerCompiler)
+    // Hilt
+    implementation(Libraries.hilt)
+    kapt(Libraries.hiltDaggerCompiler)
 
-  // Project Modules
-  implementation(project(Config.Modules.domain))
-  implementation(project(Config.Modules.data))
-  implementation(project(Config.Modules.presentation))
+    // Project Modules
+    implementation(project(Config.Modules.domain))
+    implementation(project(Config.Modules.data))
+    implementation(project(Config.Modules.presentation))
 }
