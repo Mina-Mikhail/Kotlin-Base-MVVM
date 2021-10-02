@@ -75,7 +75,7 @@ TO DO
 -----------
 - [X] Apply ktlint for checking code style.
 - [X] Use git hooks to automate code checking and styling before any new commit.
-- [ ] Use Flow instead of LiveData.
+- [ ] Use Flow in Domain layer.
 - [ ] Use UseCases.
 - [X] Handle Different Build Variants.
 - [ ] Explore full MVI implementation.
