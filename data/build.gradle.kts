@@ -1,38 +1,38 @@
 plugins {
-  id(Config.Plugins.androidLibrary)
-  id(Config.Plugins.kotlinAndroid)
-  id(Config.Plugins.kotlinKapt)
+    id(Config.Plugins.androidLibrary)
+    id(Config.Plugins.kotlinAndroid)
+    id(Config.Plugins.kotlinKapt)
 }
 
 android {
-  compileSdk = Config.AppConfig.compileSdkVersion
+    compileSdk = Config.AppConfig.compileSdkVersion
 
-  defaultConfig {
-    minSdk = Config.AppConfig.minSdkVersion
-    targetSdk = Config.AppConfig.compileSdkVersion
-  }
-
-  buildTypes {
-    getByName("release") {
-      proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+    defaultConfig {
+        minSdk = Config.AppConfig.minSdkVersion
+        targetSdk = Config.AppConfig.compileSdkVersion
     }
-  }
+
+    buildTypes {
+        getByName("release") {
+            proguardFiles(getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro")
+        }
+    }
 }
 
 dependencies {
 
-  // Kotlin Coroutines
-  implementation(Libraries.coroutinesCore)
-  implementation(Libraries.coroutinesAndroid)
+    // Kotlin Coroutines
+    implementation(Libraries.coroutinesCore)
+    implementation(Libraries.coroutinesAndroid)
 
-  // Networking
-  implementation(Libraries.retrofit)
-  implementation(Libraries.gson)
+    // Networking
+    implementation(Libraries.retrofit)
+    implementation(Libraries.gson)
 
-  // Hilt
-  implementation(Libraries.hilt)
-  kapt(Libraries.hiltDaggerCompiler)
+    // Hilt
+    implementation(Libraries.hilt)
+    kapt(Libraries.hiltDaggerCompiler)
 
-  // Project Modules
-  implementation(project(Config.Modules.domain))
+    // Project Modules
+    implementation(project(Config.Modules.domain))
 }
