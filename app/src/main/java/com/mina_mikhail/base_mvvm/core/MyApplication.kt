@@ -18,14 +18,14 @@ class MyApplication : LocaleAwareApplication() {
   fun attachBaseContext(base: Context) {
     super.attachBaseContext(base)
 
-    MultiDex.install(this)
+    MultiDex.install(this);
   }
 
   override
   fun onCreate() {
-    super.onCreate()
+    super.onCreate();
 
-    updateAndroidSecurityProvider()
+    updateAndroidSecurityProvider();
   }
 
   private fun updateAndroidSecurityProvider() {

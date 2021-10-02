@@ -4,7 +4,7 @@ import com.google.gson.Gson
 import com.google.gson.JsonSyntaxException
 import com.mina_mikhail.base_mvvm.domain.utils.BaseResponse
 import com.mina_mikhail.base_mvvm.domain.utils.ErrorResponse
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.*
+import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus
 import com.mina_mikhail.base_mvvm.domain.utils.Resource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -33,7 +33,7 @@ open class BaseRemoteDataSource @Inject constructor() {
           if ((apiResponse.result as Boolean)) {
             Resource.Success(apiResponse)
           } else {
-            Resource.Failure(API_FAIL, 200, apiResponse.detail)
+            Resource.Failure(FailureStatus.API_FAIL, 200, apiResponse.detail)
           }
         } else {
           Resource.Success(apiResponse)
@@ -47,7 +47,7 @@ open class BaseRemoteDataSource @Inject constructor() {
                 val apiResponse = jObjError.toString()
                 val response = Gson().fromJson(apiResponse, BaseResponse::class.java)
 
-                Resource.Failure(API_FAIL, throwable.code(), response.detail)
+                Resource.Failure(FailureStatus.API_FAIL, throwable.code(), response.detail)
               }
               throwable.code() == 401 -> {
                 val errorResponse = Gson().fromJson(
@@ -55,7 +55,7 @@ open class BaseRemoteDataSource @Inject constructor() {
                   ErrorResponse::class.java
                 )
 
-                Resource.Failure(TOKEN_EXPIRED, throwable.code(), errorResponse.detail)
+                Resource.Failure(FailureStatus.TOKEN_EXPIRED, throwable.code(), errorResponse.detail)
               }
               else -> {
                 try {
@@ -64,24 +64,24 @@ open class BaseRemoteDataSource @Inject constructor() {
                     ErrorResponse::class.java
                   )
 
-                  Resource.Failure(SERVER_SIDE_EXCEPTION, throwable.code(), errorResponse.detail)
+                  Resource.Failure(FailureStatus.SERVER_SIDE_EXCEPTION, throwable.code(), errorResponse.detail)
                 } catch (ex: JsonSyntaxException) {
-                  Resource.Failure(SERVER_SIDE_EXCEPTION, throwable.code(), null)
+                  Resource.Failure(FailureStatus.SERVER_SIDE_EXCEPTION, throwable.code(), null)
                 }
               }
             }
           }
 
           is UnknownHostException -> {
-            Resource.Failure(NO_INTERNET, null, null)
+            Resource.Failure(FailureStatus.NO_INTERNET, null, null)
           }
 
           is ConnectException -> {
-            Resource.Failure(NO_INTERNET, null, null)
+            Resource.Failure(FailureStatus.NO_INTERNET, null, null)
           }
 
           else -> {
-            Resource.Failure(OTHER, null, null)
+            Resource.Failure(FailureStatus.OTHER, null, null)
           }
         }
       }

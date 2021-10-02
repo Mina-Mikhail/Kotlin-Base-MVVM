@@ -14,6 +14,22 @@ buildscript {
   }
 }
 
+plugins {
+  id(Config.Plugins.ktLint) version Versions.ktLint
+}
+
+subprojects {
+  apply(plugin = Config.Plugins.ktLint) // To apply ktLint to all included modules
+
+  repositories {
+    mavenCentral()
+  }
+
+  configure<org.jlleitschuh.gradle.ktlint.KtlintExtension> {
+    debug.set(true)
+  }
+}
+
 allprojects {
   repositories {
     google()

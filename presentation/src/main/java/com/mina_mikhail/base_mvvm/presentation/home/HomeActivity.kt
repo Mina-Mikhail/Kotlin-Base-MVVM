@@ -46,7 +46,7 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
           openSpecificTabReceiver,
           IntentFilter(ACTION_OPEN_SPECIFIC_PAGE)
         )
-      isReceiverRegistered = true;
+      isReceiverRegistered = true
     }
   }
 
@@ -84,6 +84,6 @@ class HomeActivity : BaseActivity<ActivityHomeBinding>() {
   }
 
   private fun unregisterOpenSpecificTabReceiver() {
-    LocalBroadcastManager.getInstance(this).unregisterReceiver(openSpecificTabReceiver);
+    LocalBroadcastManager.getInstance(this).unregisterReceiver(openSpecificTabReceiver)
   }
 }

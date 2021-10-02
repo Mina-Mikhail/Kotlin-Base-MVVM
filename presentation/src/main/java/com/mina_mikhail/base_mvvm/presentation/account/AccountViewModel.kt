@@ -19,9 +19,11 @@ import javax.inject.Inject
 class AccountViewModel @Inject constructor(private val accountRepository: AccountRepository) : BaseViewModel() {
 
   fun sendFirebaseToken(context: Context) {
-    if (accountRepository.isLoggedIn()
-      && (accountRepository.getFirebaseToken() == null
-          || accountRepository.getFirebaseToken()?.isEmpty() == true)
+    if (accountRepository.isLoggedIn() &&
+      (
+        accountRepository.getFirebaseToken() == null ||
+          accountRepository.getFirebaseToken()?.isEmpty() == true
+        )
     ) {
       FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->
         if (task.isSuccessful) {

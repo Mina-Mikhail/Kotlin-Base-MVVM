@@ -14,10 +14,16 @@ import android.view.View
 import android.widget.TextView.BufferType.SPANNABLE
 import androidx.fragment.app.viewModels
 import com.mina_mikhail.base_mvvm.domain.auth.enums.AuthFieldsValidation
-import com.mina_mikhail.base_mvvm.domain.utils.Resource.*
+import com.mina_mikhail.base_mvvm.domain.utils.Resource
 import com.mina_mikhail.base_mvvm.presentation.R
 import com.mina_mikhail.base_mvvm.presentation.base.BaseFragment
-import com.mina_mikhail.base_mvvm.presentation.base.extensions.*
+import com.mina_mikhail.base_mvvm.presentation.base.extensions.getMyColor
+import com.mina_mikhail.base_mvvm.presentation.base.extensions.getMyDrawable
+import com.mina_mikhail.base_mvvm.presentation.base.extensions.handleApiError
+import com.mina_mikhail.base_mvvm.presentation.base.extensions.hideKeyboard
+import com.mina_mikhail.base_mvvm.presentation.base.extensions.navigateSafe
+import com.mina_mikhail.base_mvvm.presentation.base.extensions.openActivityAndClearStack
+import com.mina_mikhail.base_mvvm.presentation.base.extensions.showSnackBar
 import com.mina_mikhail.base_mvvm.presentation.base.utils.showSoftInput
 import com.mina_mikhail.base_mvvm.presentation.databinding.FragmentLogInBinding
 import com.mina_mikhail.base_mvvm.presentation.home.HomeActivity
@@ -58,7 +64,8 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>() {
       .setSpan(
         clickableSpan, finalMessage.indexOf(resources.getString(R.string.sign_up)),
         finalMessage.indexOf(resources.getString(R.string.sign_up)) + resources
-          .getString(R.string.sign_up).length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+          .getString(R.string.sign_up).length,
+        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
       )
 
     // Set span color
@@ -66,7 +73,8 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>() {
       ForegroundColorSpan(getMyColor(R.color.blue)),
       finalMessage.indexOf(resources.getString(R.string.sign_up)),
       finalMessage.indexOf(resources.getString(R.string.sign_up)) + resources
-        .getString(R.string.sign_up).length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        .getString(R.string.sign_up).length,
+      Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
     )
 
     // Set span style
@@ -74,7 +82,8 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>() {
       StyleSpan(Typeface.BOLD),
       finalMessage.indexOf(resources.getString(R.string.sign_up)),
       finalMessage.indexOf(resources.getString(R.string.sign_up)) + resources
-        .getString(R.string.sign_up).length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        .getString(R.string.sign_up).length,
+      Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
     )
 
     // Add underline to span
@@ -82,7 +91,8 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>() {
       UnderlineSpan(),
       finalMessage.indexOf(resources.getString(R.string.sign_up)),
       finalMessage.indexOf(resources.getString(R.string.sign_up)) + resources
-        .getString(R.string.sign_up).length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        .getString(R.string.sign_up).length,
+      Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
     )
 
     binding.btnSignUp.movementMethod = LinkMovementMethod.getInstance()
@@ -121,16 +131,16 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>() {
 
     viewModel.logInResponse.observe(this) {
       when (it) {
-        Loading -> {
+        Resource.Loading -> {
           hideKeyboard()
           showLoading()
         }
-        is Failure -> {
+        is Resource.Failure -> {
           hideLoading()
 
           handleApiError(it, retryAction = { viewModel.onLogInClicked() })
         }
-        is Success -> {
+        is Resource.Success -> {
           viewModel.saveUserToLocal(it.value.result)
           hideLoading()
           openHome()

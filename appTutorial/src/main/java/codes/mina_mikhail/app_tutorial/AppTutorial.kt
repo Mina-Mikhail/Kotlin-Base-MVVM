@@ -1,4 +1,4 @@
-package codes.mina_mikhail.app_tutorial;
+package codes.mina_mikhail.app_tutorial
 
 import android.graphics.drawable.Drawable
 

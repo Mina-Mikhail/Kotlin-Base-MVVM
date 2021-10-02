@@ -57,7 +57,8 @@ class IntroFragment : BaseFragment<FragmentIntroBinding>() {
       .setSpan(
         clickableSpan, finalMessage.indexOf(resources.getString(R.string.continue_as_guest)),
         finalMessage.indexOf(resources.getString(R.string.continue_as_guest)) + resources
-          .getString(R.string.continue_as_guest).length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+          .getString(R.string.continue_as_guest).length,
+        Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
       )
 
     // Set span color
@@ -65,7 +66,8 @@ class IntroFragment : BaseFragment<FragmentIntroBinding>() {
       ForegroundColorSpan(getMyColor(color.colorAccent)),
       finalMessage.indexOf(resources.getString(R.string.continue_as_guest)),
       finalMessage.indexOf(resources.getString(R.string.continue_as_guest)) + resources
-        .getString(R.string.continue_as_guest).length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        .getString(R.string.continue_as_guest).length,
+      Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
     )
 
     // Set span style
@@ -73,7 +75,8 @@ class IntroFragment : BaseFragment<FragmentIntroBinding>() {
       StyleSpan(Typeface.BOLD),
       finalMessage.indexOf(resources.getString(R.string.continue_as_guest)),
       finalMessage.indexOf(resources.getString(R.string.continue_as_guest)) + resources
-        .getString(R.string.continue_as_guest).length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        .getString(R.string.continue_as_guest).length,
+      Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
     )
 
     // Add underline to span
@@ -81,7 +84,8 @@ class IntroFragment : BaseFragment<FragmentIntroBinding>() {
       UnderlineSpan(),
       finalMessage.indexOf(resources.getString(R.string.continue_as_guest)),
       finalMessage.indexOf(resources.getString(R.string.continue_as_guest)) + resources
-        .getString(R.string.continue_as_guest).length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
+        .getString(R.string.continue_as_guest).length,
+      Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
     )
 
     binding.btnGuestMode.movementMethod = LinkMovementMethod.getInstance()

@@ -7,6 +7,4 @@ import javax.inject.Inject
 
 @HiltViewModel
 class WebViewViewModel @Inject constructor(private val generalRepository: GeneralRepository) :
-  BaseViewModel() {
-
-}
+  BaseViewModel()

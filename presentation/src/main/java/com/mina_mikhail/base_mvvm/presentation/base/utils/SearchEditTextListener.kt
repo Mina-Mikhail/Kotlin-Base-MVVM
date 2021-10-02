@@ -31,7 +31,6 @@ internal class SearchEditTextListener(
 
   override
   fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
-
   }
 
   override
@@ -53,7 +52,6 @@ internal class SearchEditTextListener(
 
   override
   fun afterTextChanged(p0: Editable?) {
-
   }
 
   @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)

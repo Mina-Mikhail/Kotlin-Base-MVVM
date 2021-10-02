@@ -9,5 +9,4 @@ sealed class Resource<out T> {
   object Empty : Resource<Nothing>()
 
   object Loading : Resource<Nothing>()
-
 }

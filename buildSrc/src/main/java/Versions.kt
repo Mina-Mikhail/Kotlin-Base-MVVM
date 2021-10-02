@@ -1,6 +1,7 @@
 object Versions {
   const val gradleVersion = "7.0.2"
   const val kotlin = "1.5.21"
+  const val ktLint = "10.2.0"
 
   // Support
   const val appcompat = "1.3.1"

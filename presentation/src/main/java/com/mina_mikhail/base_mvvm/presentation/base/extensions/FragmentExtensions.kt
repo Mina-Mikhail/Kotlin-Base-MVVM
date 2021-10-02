@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.NavDirections
 import androidx.navigation.NavOptions
 import androidx.navigation.fragment.findNavController
-import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus.*
+import com.mina_mikhail.base_mvvm.domain.utils.FailureStatus
 import com.mina_mikhail.base_mvvm.domain.utils.Resource.Failure
 import com.mina_mikhail.base_mvvm.presentation.R
 import com.mina_mikhail.base_mvvm.presentation.base.utils.hideSoftInput
@@ -23,7 +23,7 @@ fun Fragment.handleApiError(
   noInternetAction: (() -> Unit)? = null
 ) {
   when (failure.failureStatus) {
-    API_FAIL, SERVER_SIDE_EXCEPTION -> {
+    FailureStatus.API_FAIL, FailureStatus.SERVER_SIDE_EXCEPTION -> {
       noDataAction?.invoke()
 
       requireView().showSnackBar(
@@ -32,17 +32,17 @@ fun Fragment.handleApiError(
         retryAction
       )
     }
-    TOKEN_EXPIRED -> {
+    FailureStatus.TOKEN_EXPIRED -> {
       // TODO : CALL API TO REFRESH TOKEN
       // OR (depends on your application business)
       // TODO : LOG OUT
     }
-    NO_INTERNET -> {
+    FailureStatus.NO_INTERNET -> {
       noInternetAction?.invoke()
 
       showNoInternetAlert(requireActivity())
     }
-    OTHER -> {
+    FailureStatus.OTHER -> {
       noDataAction?.invoke()
 
       requireView().showSnackBar(
@@ -88,12 +88,15 @@ fun <T> Fragment.setNavigationResult(result: T, key: String = "result") {
 }
 
 fun Fragment.onBackPressedCustomAction(action: () -> Unit) {
-  requireActivity().onBackPressedDispatcher.addCallback(viewLifecycleOwner, object : OnBackPressedCallback(true) {
-    override
-    fun handleOnBackPressed() {
-      action()
+  requireActivity().onBackPressedDispatcher.addCallback(
+    viewLifecycleOwner,
+    object : OnBackPressedCallback(true) {
+      override
+      fun handleOnBackPressed() {
+        action()
+      }
     }
-  })
+  )
 }
 
 fun Fragment.navigateSafe(directions: NavDirections, navOptions: NavOptions? = null) {

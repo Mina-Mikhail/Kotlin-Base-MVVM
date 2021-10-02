@@ -14,7 +14,8 @@ import codes.mina_mikhail.action_chooser.ActionChooserAdapter.ActionChooserViewH
 import codes.mina_mikhail.action_chooser.databinding.ItemChooserActionBinding
 
 internal class ActionChooserAdapter(
-  private var itemClick: ((item: ChooserAction) -> Unit), private var supportSelection: Boolean,
+  private var itemClick: ((item: ChooserAction) -> Unit),
+  private var supportSelection: Boolean,
   private var radioButtonSelectionColor: Int?
 ) :
   ListAdapter<ChooserAction, ActionChooserViewHolder>(DIFF_CALLBACK) {

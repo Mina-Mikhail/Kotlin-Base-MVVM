@@ -8,6 +8,4 @@ import javax.inject.Inject
 class GeneralRepositoryImpl @Inject constructor(
   private val remoteDataSource: GeneralRemoteDataSource,
   private val appPreferences: AppPreferences
-) : GeneralRepository {
-
-}
+) : GeneralRepository

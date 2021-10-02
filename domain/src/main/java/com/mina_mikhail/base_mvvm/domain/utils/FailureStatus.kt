@@ -7,5 +7,4 @@ enum class FailureStatus {
   TOKEN_EXPIRED,
   NO_INTERNET,
   OTHER
-
 }

@@ -37,8 +37,13 @@ abstract class SwipeToDeleteCallback(context: Context) :
   }
 
   override fun onChildDraw(
-    c: Canvas, recyclerView: RecyclerView, viewHolder: RecyclerView.ViewHolder,
-    dX: Float, dY: Float, actionState: Int, isCurrentlyActive: Boolean
+    c: Canvas,
+    recyclerView: RecyclerView,
+    viewHolder: RecyclerView.ViewHolder,
+    dX: Float,
+    dY: Float,
+    actionState: Int,
+    isCurrentlyActive: Boolean
   ) {
 
     val itemView = viewHolder.itemView

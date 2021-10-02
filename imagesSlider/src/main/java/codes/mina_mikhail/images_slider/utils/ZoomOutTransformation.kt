@@ -14,7 +14,7 @@ internal class ZoomOutTransformation : PageTransformer {
   override
   fun transformPage(page: View, position: Float) {
     when {
-      position < -1 -> {  // [-Infinity,-1)
+      position < -1 -> { // [-Infinity,-1)
         // This page is way off-screen to the left.
         page.alpha = 0f
       }
@@ -23,7 +23,7 @@ internal class ZoomOutTransformation : PageTransformer {
         page.scaleY = MIN_SCALE.coerceAtLeast(1 - abs(position))
         page.alpha = MIN_ALPHA.coerceAtLeast(1 - abs(position))
       }
-      else -> {  // (1,+Infinity]
+      else -> { // (1,+Infinity]
         // This page is way off-screen to the right.
         page.alpha = 0f
       }

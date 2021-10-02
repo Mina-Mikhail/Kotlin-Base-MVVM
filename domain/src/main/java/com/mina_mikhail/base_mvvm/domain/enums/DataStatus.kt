@@ -7,5 +7,4 @@ object DataStatus {
   const val NO_DATA = 3
   const val NO_INTERNET = 4
   const val LOADING_NEXT_PAGE = 5
-
 }

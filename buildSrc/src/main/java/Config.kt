@@ -29,6 +29,7 @@ object Config {
     const val crashlytics = "com.google.firebase.crashlytics"
     const val androidLibrary = "com.android.library"
     const val kotlinJvm = "org.jetbrains.kotlin.jvm"
+    const val ktLint = "org.jlleitschuh.gradle.ktlint"
   }
 
   object Modules {
