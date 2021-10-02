@@ -6,10 +6,5 @@ echo "Checking code formatting..."
 
 status=$?
 
-if [ "$status" = 0 ] ; then
-    echo "No formatting issues were found"
-    exit 0
-else
-    echo 1>&2 "* There are code formatting issues that must be addressed"
-    exit 1
-fi
+[ $status -ne 0 ] && exit 1
+exit 0

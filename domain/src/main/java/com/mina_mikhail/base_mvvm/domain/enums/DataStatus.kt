@@ -1,7 +1,6 @@
 package com.mina_mikhail.base_mvvm.domain.enums
 
 object DataStatus {
-
   const val LOADING = 1
   const val SHOW_DATA = 2
   const val NO_DATA = 3

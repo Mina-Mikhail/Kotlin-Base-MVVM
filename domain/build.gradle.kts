@@ -1,3 +1,3 @@
 plugins {
-    id(Config.Plugins.kotlinJvm)
+  id(Config.Plugins.kotlinJvm)
 }
