@@ -25,10 +25,10 @@ Architecture:
 - Using Kotlin-KTS & buildSrc to handle project dependencies.
 
 
-Tech stack & Libraries:
+Tech Stack & Libraries:
 -----------------
 - Navigation component - navigation graph for navigating and replacing screens/fragments
-- ViewBinding - allows to more easily write code that interacts with views and replaces ```findViewById```.
+- DataBinding - allows to more easily write code that interacts with views and replaces ```findViewById```.
 - ViewModel - UI related data holder, lifecycle aware.
 - LiveData - Build data objects that notify views when the underlying database changes.
 - Dagger-Hilt for dependency injection. Object creation and scoping is handled by Hilt.
@@ -58,9 +58,17 @@ Extra Modules:
   - ImagesSlider (An images slider supports auto scrolling for images from url and support GIF images).
 
 
-Code style
+Code Style
 -----------
 - Following official kotlin code style
+
+
+Apply Git Hooks
+-----------
+- To apply git hooks in order to automate process of styling and checking your code, just follow this steps:
+  - Copy ```pre-commit``` file from ```myGitHooks```.
+  - Paste it into ```.git/hooks``` in your project.
+- Now each time you commit your changes, ```ktlintFormat``` and  ```ktlintCheck``` will automatically run
 
 
 TO DO
