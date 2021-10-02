@@ -77,7 +77,7 @@ TO DO
 - [X] Use git hooks to automate code checking and styling before any new commit.
 - [ ] Use Flow instead of LiveData.
 - [ ] Use UseCases.
-- [ ] Handle Different Build Varient.
+- [X] Handle Different Build Variants.
 - [ ] Explore full MVI implementation.
 - [ ] Add some unit tests.
 

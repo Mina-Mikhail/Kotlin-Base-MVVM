@@ -4,7 +4,6 @@ plugins {
   id(Config.Plugins.kotlinKapt)
   id(Config.Plugins.hilt)
   id(Config.Plugins.navigationSafeArgs)
-  id(Config.Plugins.googleServices)
 }
 
 android {
@@ -51,12 +50,6 @@ dependencies {
   implementation(Libraries.loadingAnimations)
   implementation(Libraries.alerter)
   implementation(Libraries.coil)
-  implementation(Libraries.gifDrawable)
-
-  // Firebase
-  implementation(Libraries.firebaseCore)
-  implementation(Libraries.firebaseMessaging)
-  implementation(Libraries.firebaseIID)
 
   // Utils
   implementation(Libraries.playServices)

@@ -4,8 +4,6 @@ plugins {
   id(Config.Plugins.kotlinKapt)
   id(Config.Plugins.navigationSafeArgs)
   id(Config.Plugins.hilt)
-  id(Config.Plugins.googleServices)
-  id(Config.Plugins.crashlytics)
 }
 
 android {
@@ -25,12 +23,32 @@ android {
 
   buildTypes {
     getByName("debug") {
+      resValue("string", "app_name", "Base MVVM-Test")
+      manifestPlaceholders["appIcon"] = "@mipmap/ic_launcher_test"
+      manifestPlaceholders["appRoundIcon"] = "@mipmap/ic_launcher_test_round"
+
       buildConfigField("String", "API_BASE_URL", Config.Environments.debugBaseUrl)
     }
 
+    signingConfigs {
+      create("releaseConfig") {
+        storeFile = file(rootProject.file("key"))
+        storePassword = "123456"
+        keyAlias = "My-Key"
+        keyPassword = "123456"
+      }
+    }
+
     getByName("release") {
+      signingConfig = signingConfigs.getByName("releaseConfig")
+
       isMinifyEnabled = true
       isShrinkResources = true
+
+      resValue("string", "app_name", "Base MVVM")
+      manifestPlaceholders["appIcon"] = "@mipmap/ic_launcher"
+      manifestPlaceholders["appRoundIcon"] = "@mipmap/ic_launcher_round"
+
       buildConfigField("String", "API_BASE_URL", Config.Environments.releaseBaseUrl)
     }
   }
@@ -49,12 +67,6 @@ dependencies {
   implementation(Libraries.gson)
   implementation(Libraries.interceptor)
   implementation(Libraries.chuckLogging)
-
-  // Firebase
-  implementation(Libraries.firebaseCore)
-  implementation(Libraries.firebaseMessaging)
-  implementation(Libraries.firebaseIID)
-  implementation(Libraries.crashlytics)
 
   // Utils
   implementation(Libraries.playServices)

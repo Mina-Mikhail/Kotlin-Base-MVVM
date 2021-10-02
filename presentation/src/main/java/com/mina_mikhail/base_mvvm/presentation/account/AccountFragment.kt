@@ -39,15 +39,6 @@ class AccountFragment : BaseFragment<FragmentAccountBinding>() {
     binding.includedToolbar.backIv.hide()
   }
 
-  override
-  fun observeAPICall() {
-    sendFirebaseToken()
-  }
-
-  private fun sendFirebaseToken() {
-    viewModel.sendFirebaseToken(requireContext())
-  }
-
   private fun showLogOutPopUp() {
     PrettyPopUpHelper.Builder(childFragmentManager)
       .setTitle(R.string.log_out)

@@ -9,8 +9,6 @@ buildscript {
     classpath(Config.Dependencies.kotlin)
     classpath(Config.Dependencies.navigationSafeArgs)
     classpath(Config.Dependencies.hilt)
-    classpath(Config.Dependencies.googleServices)
-    classpath(Config.Dependencies.crashlytics)
   }
 }
 
