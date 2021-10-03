@@ -7,9 +7,9 @@ import com.mina_mikhail.base_mvvm.domain.utils.Resource
 
 interface AccountRepository {
 
-  suspend fun sendFirebaseToken(request: SendFirebaseTokenRequest): Resource<BaseResponse<*>>
+  suspend fun sendFirebaseToken(request: SendFirebaseTokenRequest): Resource<BaseResponse<Boolean>>
 
-  suspend fun logOut(): Resource<BaseResponse<*>>
+  suspend fun logOut(): Resource<BaseResponse<Boolean>>
 
   fun isFirstTime(): Boolean
 

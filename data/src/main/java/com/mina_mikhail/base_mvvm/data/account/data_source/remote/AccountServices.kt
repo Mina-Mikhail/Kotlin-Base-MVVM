@@ -9,8 +9,8 @@ import retrofit2.http.PUT
 interface AccountServices {
 
   @PUT("Account/FirebaseToken/Update")
-  suspend fun sendFirebaseToken(@Body request: SendFirebaseTokenRequest): BaseResponse<*>
+  suspend fun sendFirebaseToken(@Body request: SendFirebaseTokenRequest): BaseResponse<Boolean>
 
   @DELETE("Account/Logout")
-  suspend fun logOut(): BaseResponse<*>
+  suspend fun logOut(): BaseResponse<Boolean>
 }

@@ -4,6 +4,4 @@ data class SendFirebaseTokenRequest(
   var token: String,
   var deviceType: String,
   var deviceId: String
-) {
-  constructor() : this("", "", "")
-}
+)

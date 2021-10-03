@@ -13,8 +13,7 @@ class AccountRepositoryImpl @Inject constructor(
 ) : AccountRepository {
 
   override
-  suspend fun sendFirebaseToken(request: SendFirebaseTokenRequest) =
-    remoteDataSource.sendFirebaseToken(request)
+  suspend fun sendFirebaseToken(request: SendFirebaseTokenRequest) = remoteDataSource.sendFirebaseToken(request)
 
   override
   suspend fun logOut() = remoteDataSource.logOut()

@@ -1,20 +1,34 @@
 package com.mina_mikhail.base_mvvm.presentation.account
 
-import androidx.lifecycle.liveData
-import com.mina_mikhail.base_mvvm.domain.account.repository.AccountRepository
-import com.mina_mikhail.base_mvvm.domain.utils.Resource.Loading
+import androidx.lifecycle.viewModelScope
+import com.mina_mikhail.base_mvvm.domain.account.use_case.AccountUseCases
+import com.mina_mikhail.base_mvvm.domain.utils.BaseResponse
+import com.mina_mikhail.base_mvvm.domain.utils.Resource
 import com.mina_mikhail.base_mvvm.presentation.base.BaseViewModel
+import com.mina_mikhail.base_mvvm.presentation.base.utils.SingleLiveEvent
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.launchIn
+import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 @HiltViewModel
-class AccountViewModel @Inject constructor(private val accountRepository: AccountRepository) : BaseViewModel() {
+class AccountViewModel @Inject constructor(private val accountUseCases: AccountUseCases) : BaseViewModel() {
 
-  fun logOut() = liveData(Dispatchers.IO) {
-    emit(Loading)
-    emit(accountRepository.logOut())
+  private val _logOuResponse = MutableStateFlow<Resource<BaseResponse<Boolean>>>(Resource.Default)
+  val logOutResponse = _logOuResponse
+
+  val showLogOutPopUp = SingleLiveEvent<Void>()
+
+  fun logOut() {
+    accountUseCases.logOutUseCase()
+      .onEach { result ->
+        _logOuResponse.value = result
+      }
+      .launchIn(viewModelScope)
   }
 
-  fun clearPreferences() = accountRepository.clearPreferences()
+  fun onLogOutClicked() {
+    showLogOutPopUp.call()
+  }
 }

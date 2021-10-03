@@ -26,6 +26,7 @@
   <string name="forgot_your_password">Forgot your password?</string>
   <string name="not_have_account">Don\'t have an account?</string>
   <string name="empty_email">Please enter your email address</string>
+  <string name="invalid_email">Please enter valid email address</string>
   <string name="empty_password">Please enter your password</string>
 
   <!-- Sign Up -->

@@ -8,6 +8,9 @@ object Libraries {
   // Kotlin
   const val kotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${Versions.kotlin}"
 
+  // Java
+  const val javaInject = "javax.inject:javax.inject:${Versions.javaInject}"
+
   // Arch Components
   const val viewModel = "androidx.lifecycle:lifecycle-viewmodel-ktx:${Versions.lifecycle}"
   const val lifeData = "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycle}"

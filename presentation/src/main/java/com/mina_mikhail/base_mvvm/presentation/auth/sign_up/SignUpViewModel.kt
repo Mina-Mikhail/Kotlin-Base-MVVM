@@ -9,7 +9,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SignUpViewModel @Inject constructor(private val authRepository: AuthRepository) : BaseViewModel() {
 
-  val backToPreviousScreen: SingleLiveEvent<Void> = SingleLiveEvent()
+  val backToPreviousScreen = SingleLiveEvent<Void>()
 
   fun onBackClicked() {
     backToPreviousScreen.call()

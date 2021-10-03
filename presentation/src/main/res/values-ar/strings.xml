@@ -25,7 +25,8 @@
   <string name="password">كلمة المرور</string>
   <string name="forgot_your_password">نسيت كلمة المرور؟</string>
   <string name="not_have_account">ليس لديك حساب؟</string>
-  <string name="empty_email">برجاء ادخال البريد الالكترونى الخاص بك</string>
+  <string name="empty_email">برجاء ادخال البريد الإلكترونى الخاص بك</string>
+  <string name="invalid_email">برجاء ادخال بريد إلكترونى صحيح</string>
   <string name="empty_password">برجاء ادخال كلمة المرور</string>
 
   <!-- Sign Up -->

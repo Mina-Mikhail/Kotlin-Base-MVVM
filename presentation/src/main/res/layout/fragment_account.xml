@@ -21,6 +21,25 @@
         />
 
     <TextView
+        style="@style/TextMediumFont"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="@{() -> viewModel.onLogOutClicked()}"
+        android:layout_marginBottom="@dimen/dimen36"
+        android:background="@drawable/btn_accent"
+        android:id="@+id/btn_show_pretty_pop_up"
+        android:gravity="center"
+        android:paddingStart="@dimen/dimen20"
+        android:paddingTop="@dimen/dimen7"
+        android:paddingEnd="@dimen/dimen20"
+        android:paddingBottom="@dimen/dimen7"
+        android:text="Log Out"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/text_size16"
+        />
+
+    <TextView
         style="@style/TitleBoldFont"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -13,6 +13,7 @@ import android.text.style.UnderlineSpan
 import android.view.View
 import android.widget.TextView.BufferType.SPANNABLE
 import androidx.fragment.app.viewModels
+import androidx.lifecycle.lifecycleScope
 import com.mina_mikhail.base_mvvm.domain.auth.enums.AuthFieldsValidation
 import com.mina_mikhail.base_mvvm.domain.utils.Resource
 import com.mina_mikhail.base_mvvm.presentation.R
@@ -28,6 +29,7 @@ import com.mina_mikhail.base_mvvm.presentation.base.utils.showSoftInput
 import com.mina_mikhail.base_mvvm.presentation.databinding.FragmentLogInBinding
 import com.mina_mikhail.base_mvvm.presentation.home.HomeActivity
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.flow.collect
 
 @AndroidEntryPoint
 class LogInFragment : BaseFragment<FragmentLogInBinding>() {
@@ -48,7 +50,8 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>() {
   }
 
   private fun setUpSignUpButton() {
-    val finalMessage = "${resources.getString(R.string.not_have_account)} ${resources.getString(R.string.sign_up)}"
+    val finalMessage =
+      "${resources.getString(R.string.not_have_account)} ${resources.getString(R.string.sign_up)}"
 
     val spanString = SpannableString(finalMessage)
 
@@ -103,7 +106,10 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>() {
   override
   fun setupObservers() {
     viewModel.togglePassword.observe(this) {
-      if (binding.etPassword.transformationMethod.javaClass.simpleName.equals("PasswordTransformationMethod")) {
+      if (binding.etPassword.transformationMethod.javaClass.simpleName.equals(
+          "PasswordTransformationMethod"
+        )
+      ) {
         binding.etPassword.transformationMethod = SingleLineTransformationMethod()
         binding.ivPasswordToggle.setImageDrawable(getMyDrawable(R.drawable.ic_hide_password))
       } else {
@@ -117,33 +123,41 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>() {
       openForgotPassword()
     }
 
-    viewModel.onInvalidField.observe(this) {
-      if (it == AuthFieldsValidation.EMPTY_EMAIL) {
-        binding.etEmail.requestFocus()
-        showSoftInput(binding.etEmail, requireContext())
-        requireView().showSnackBar(resources.getString(R.string.empty_email))
-      } else if (it == AuthFieldsValidation.EMPTY_PASSWORD) {
-        binding.etPassword.requestFocus()
-        showSoftInput(binding.etPassword, requireContext())
-        requireView().showSnackBar(resources.getString(R.string.empty_password))
+    viewModel.validationException.observe(this) {
+      when (it) {
+        AuthFieldsValidation.EMPTY_EMAIL.value -> {
+          binding.etEmail.requestFocus()
+          showSoftInput(binding.etEmail, requireContext())
+          requireView().showSnackBar(resources.getString(R.string.empty_email))
+        }
+        AuthFieldsValidation.INVALID_EMAIL.value -> {
+          binding.etEmail.requestFocus()
+          showSoftInput(binding.etEmail, requireContext())
+          requireView().showSnackBar(resources.getString(R.string.invalid_email))
+        }
+        AuthFieldsValidation.EMPTY_PASSWORD.value -> {
+          binding.etPassword.requestFocus()
+          showSoftInput(binding.etPassword, requireContext())
+          requireView().showSnackBar(resources.getString(R.string.empty_password))
+        }
       }
     }
 
-    viewModel.logInResponse.observe(this) {
-      when (it) {
-        Resource.Loading -> {
-          hideKeyboard()
-          showLoading()
-        }
-        is Resource.Failure -> {
-          hideLoading()
-
-          handleApiError(it, retryAction = { viewModel.onLogInClicked() })
-        }
-        is Resource.Success -> {
-          viewModel.saveUserToLocal(it.value.result)
-          hideLoading()
-          openHome()
+    lifecycleScope.launchWhenResumed {
+      viewModel.logInResponse.collect {
+        when (it) {
+          Resource.Loading -> {
+            hideKeyboard()
+            showLoading()
+          }
+          is Resource.Success -> {
+            hideLoading()
+            openHome()
+          }
+          is Resource.Failure -> {
+            hideLoading()
+            handleApiError(it, retryAction = { viewModel.onLogInClicked() })
+          }
         }
       }
     }

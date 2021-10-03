@@ -8,7 +8,7 @@ import javax.inject.Inject
 @HiltViewModel
 class TutorialViewModel @Inject constructor() : BaseViewModel() {
 
-  val openIntro: SingleLiveEvent<Void> = SingleLiveEvent()
+  val openIntro = SingleLiveEvent<Void>()
 
   fun onSkipClicked() {
     openIntro.call()

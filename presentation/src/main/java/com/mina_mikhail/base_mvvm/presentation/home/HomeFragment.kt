@@ -33,10 +33,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     setUpToolBar()
 
     setActionsDummyData()
-
-    binding.btnShowActionChooserPopUp.setOnClickListener { showActionChooserPopUp() }
-
-    binding.btnShowPrettyPopUp.setOnClickListener { showPrettyPopUp() }
   }
 
   private fun setUpToolBar() {
@@ -71,7 +67,14 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
   }
 
-  private fun showActionChooserPopUp() {
+  override
+  fun setupObservers() {
+    viewModel.showActionChooser.observe(this) { showActionChooser() }
+
+    viewModel.showPrettyPopUp.observe(this) { showPrettyPopUp() }
+  }
+
+  private fun showActionChooser() {
     ActionChooserHelper.Builder(childFragmentManager)
       .setPopUpBackground(R.drawable.bg_round_pop_up)
       .setTitle("Choose Option")

@@ -3,6 +3,9 @@ object Versions {
   const val kotlin = "1.5.21"
   const val ktLint = "10.2.0"
 
+  // Java Inject
+  const val javaInject = "1"
+
   // Support
   const val appcompat = "1.3.1"
   const val coreKtx = "1.6.0"

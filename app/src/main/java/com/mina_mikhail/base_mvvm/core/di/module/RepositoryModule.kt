@@ -37,8 +37,7 @@ class RepositoryModule {
   @Singleton
   fun provideAuthRepository(
     remoteDataSource: AuthRemoteDataSource,
-    appPreferences: AppPreferences
-  ): AuthRepository = AuthRepositoryImpl(remoteDataSource, appPreferences)
+  ): AuthRepository = AuthRepositoryImpl(remoteDataSource)
 
   @Provides
   @Singleton

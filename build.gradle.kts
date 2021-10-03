@@ -37,8 +37,6 @@ allprojects {
   }
 }
 
-tasks {
-  val clean: TaskProvider<Delete> by registering(Delete::class) {
-    delete(buildDir)
-  }
+tasks.register("clean", Delete::class) {
+  delete(rootProject.buildDir)
 }

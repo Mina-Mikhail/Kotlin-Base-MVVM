@@ -23,30 +23,19 @@ fun Fragment.handleApiError(
   noInternetAction: (() -> Unit)? = null
 ) {
   when (failure.failureStatus) {
-    FailureStatus.API_FAIL, FailureStatus.SERVER_SIDE_EXCEPTION -> {
+    FailureStatus.EMPTY -> {
       noDataAction?.invoke()
-
-      requireView().showSnackBar(
-        failure.message ?: resources.getString(R.string.some_error),
-        resources.getString(R.string.retry),
-        retryAction
-      )
-    }
-    FailureStatus.TOKEN_EXPIRED -> {
-      // TODO : CALL API TO REFRESH TOKEN
-      // OR (depends on your application business)
-      // TODO : LOG OUT
     }
     FailureStatus.NO_INTERNET -> {
       noInternetAction?.invoke()
 
       showNoInternetAlert(requireActivity())
     }
-    FailureStatus.OTHER -> {
+    FailureStatus.API_FAIL, FailureStatus.OTHER -> {
       noDataAction?.invoke()
 
       requireView().showSnackBar(
-        resources.getString(R.string.some_error),
+        failure.message ?: resources.getString(R.string.some_error),
         resources.getString(R.string.retry),
         retryAction
       )

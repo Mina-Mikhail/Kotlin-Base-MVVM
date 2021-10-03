@@ -6,3 +6,5 @@ data class LogInRequest(
 ) {
   constructor() : this("", "")
 }
+
+class LogInValidationException(private val validationType: String) : Exception(validationType)
