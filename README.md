@@ -83,6 +83,11 @@ TO DO
 - [ ] Add some unit tests.
 
 
+Contributing to Project
+-----------
+- Just make pull request. You are in! :thumbsup:
+
+
 Find this project useful ? :heart:
 -----------
 - Support it by clicking the :star: button on the upper right of this page. :v:
