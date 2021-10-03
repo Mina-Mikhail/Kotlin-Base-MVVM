@@ -14,17 +14,24 @@ Android Clean Architecture
 
 :point_right: Clean Architecture:
 -----------------
-![http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture/clean_architecture.png)
+<div align="center" style="justify-content:center;display:flex;">
+<center> <img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/architecture.png" style="width:500px;height:290px;display:block;margin:auto;"> </center>
+<center> <img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/general_architecture.png" style="width:400px;height:350px;display:block;margin:auto;"> </center>
+</div>
 
 
-:point_right: Architectural Approach:
+:point_right: Domain & Data Layer:
 -----------------
-![http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture/clean_architecture_layers.png)
+<div align="center">
+<img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/data_layer.png" style="width:400px;height:450px;">
+</div>
 
-
-:point_right: Architectural Reactive Approach:
+:point_right: Presentation Layer:
 -----------------
-![http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture/clean_architecture_layers_details.png)
+<div align="center">
+<img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/ui_layer_1.png">
+<img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/ui_layer_2.png">
+</div>
 
 
 :point_right: Architecture:
