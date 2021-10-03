@@ -48,7 +48,7 @@ Android Clean Architecture
 - Navigation component - navigation graph for navigating and replacing screens/fragments
 - DataBinding - allows to more easily write code that interacts with views and replaces ```findViewById```.
 - ViewModel - UI related data holder, lifecycle aware.
-- LiveData - Build data objects that notify views when the underlying database changes.
+- Flow & StateFlow - Build data objects that notify views when the underlying database changes.
 - Dagger-Hilt for dependency injection. Object creation and scoping is handled by Hilt.
 - Kotlin Coroutines - for managing background threads with simplified code and reducing needs for callbacks
 - Retrofit2 & OkHttp3 - to make REST requests to the web service integrated.
