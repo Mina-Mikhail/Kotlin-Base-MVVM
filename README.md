@@ -83,6 +83,12 @@ Android Clean Architecture
 - Now each time you commit your changes, ```ktlintFormat``` and  ```ktlintCheck``` will automatically run
 
 
+:point_right: Local Development:
+-----------
+- Here are some useful Gradle commands for executing this example:
+  - `./gradlew clean` - Delets build directory.
+
+
 :point_right: TO DO:
 -----------
 - [X] Apply ktlint for checking code style.
