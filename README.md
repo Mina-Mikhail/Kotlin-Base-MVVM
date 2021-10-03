@@ -38,6 +38,7 @@ Android Clean Architecture
 - Following Clean Architecture.
 - MVVM Architecture.
 - Repository pattern.
+- Use Cases.
 - Applying SOLID principles, each class has a single job with separation of concerns by making classes independent
   of each other and communicating with interfaces.
 - Using Kotlin-KTS & buildSrc to handle project dependencies.
