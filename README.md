@@ -14,23 +14,22 @@ Android Clean Architecture
 
 :point_right: Clean Architecture:
 -----------------
-<div align="center" style="justify-content:center;display:flex;">
-<center> <img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/architecture.png" style="width:500px;height:290px;display:block;margin:auto;"> </center>
-<center> <img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/general_architecture.png" style="width:400px;height:350px;display:block;margin:auto;"> </center>
+<div align="center">
+<img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/architecture.png">
 </div>
 
 
 :point_right: Domain & Data Layer:
 -----------------
 <div align="center">
-<img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/data_layer.png" style="width:400px;height:450px;">
+<img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/data_layer.png">
 </div>
+
 
 :point_right: Presentation Layer:
 -----------------
 <div align="center">
-<img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/ui_layer_1.png">
-<img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/ui_layer_2.png">
+<img src="https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/blob/master/images/ui_layer.png">
 </div>
 
 
