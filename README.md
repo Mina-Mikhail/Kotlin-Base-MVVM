@@ -1,22 +1,33 @@
+<h1 align="center">
 Android Clean Architecture 
-=========================
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/Apache-2.0)
-[![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](https://github.com/MindorksOpenSource/Kotlin-Flow-Android-Examples/blob/master/LICENSE)
+</h1>
 
-Clean Architecture:
+
+<div align="center">
+<a name="open_source"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102?style=for-the-badge"></a>
+<a name="stars"><img src="https://img.shields.io/github/stars/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge"></a>
+<a name="forks"><img src="https://img.shields.io/github/forks/Mina-Mikhail/Kotlin-Base-MVVM?logoColor=green&style=for-the-badge"></a>
+<a name="contributions"><img src="https://img.shields.io/github/contributors/Mina-Mikhail/Kotlin-Base-MVVM?logoColor=green&style=for-the-badge"></a>
+<a name="license"><img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
+</div>
+
+
+:point_right: Clean Architecture:
 -----------------
 ![http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture/clean_architecture.png)
 
-Architectural Approach:
+
+:point_right: Architectural Approach:
 -----------------
 ![http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture/clean_architecture_layers.png)
 
-Architectural reactive approach
+
+:point_right: Architectural Reactive Approach:
 -----------------
 ![http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/](https://github.com/android10/Sample-Data/blob/master/Android-CleanArchitecture/clean_architecture_layers_details.png)
 
 
-Architecture:
+:point_right: Architecture:
 -----------------
 - Following Clean Architecture.
 - MVVM Architecture.
@@ -26,7 +37,7 @@ Architecture:
 - Using Kotlin-KTS & buildSrc to handle project dependencies.
 
 
-Tech Stack & Libraries:
+:point_right: Tech Stack & Libraries:
 -----------------
 - Navigation component - navigation graph for navigating and replacing screens/fragments
 - DataBinding - allows to more easily write code that interacts with views and replaces ```findViewById```.
@@ -39,7 +50,7 @@ Tech Stack & Libraries:
 - Material Bottom Navigation - to handle bottom tabs with support for multiple backStack.
 
 
-Project Structure:
+:point_right: Project Structure:
 -----------------
 - Sample includes some basic features required in each project like :
   - Splash.
@@ -50,7 +61,7 @@ Project Structure:
   - Home Screen - (Contains 3 Tabs with 3 NavGraphs).
 
 
-Extra Modules:
+:point_right: Extra Modules:
 -----------------
 - You will find extra modules also developed by me like :
   - AppTutorial - (To handle onBoarding tutorial screens).
@@ -59,12 +70,12 @@ Extra Modules:
   - ImagesSlider (An images slider supports auto scrolling for images from url and support GIF images).
 
 
-Code Style
+:point_right: Code Style:
 -----------
 - Following official kotlin code style
 
 
-Apply Git Hooks
+:point_right: Apply Git Hooks:
 -----------
 - To apply git hooks in order to automate process of styling and checking your code, just follow this steps:
   - Copy ```pre-commit``` file from ```myGitHooks```.
@@ -72,7 +83,7 @@ Apply Git Hooks
 - Now each time you commit your changes, ```ktlintFormat``` and  ```ktlintCheck``` will automatically run
 
 
-TO DO
+:point_right: TO DO:
 -----------
 - [X] Apply ktlint for checking code style.
 - [X] Use git hooks to automate code checking and styling before any new commit.
@@ -83,20 +94,31 @@ TO DO
 - [ ] Add some unit tests.
 
 
-Contributing to Project
+:point_right: Contributing to Project:
 -----------
 - Just make pull request. You are in! :thumbsup:
 
 
-Find this project useful ? :heart:
+:point_right: Find this project useful ? :heart:
 -----------
 - Support it by clicking the :star: button on the upper right of this page. :v:
 
 
-License
+:point_right: Stargazers: :star:
+-----------
+[![Stargazers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/stars/Mina-Mikhail/Kotlin-Base-MVVM)](https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/stargazers)
+
+
+:point_right: Forkers: :hammer_and_pick:
+-----------
+[![Forkers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/forks/Mina-Mikhail/Kotlin-Base-MVVM)](https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/network/members)
+
+
+
+:warning: License:
 --------
 ```
-   Copyright (C) 2020 MINDORKS NEXTGEN PRIVATE LIMITED
+   Copyright (C) 2021 MINDORKS NEXTGEN PRIVATE LIMITED
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
