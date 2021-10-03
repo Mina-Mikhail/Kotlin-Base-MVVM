@@ -78,7 +78,7 @@ Android Clean Architecture
 :point_right: Apply Git Hooks:
 -----------
 - To apply git hooks in order to automate process of styling and checking your code, just follow this steps:
-  - Copy ```pre-commit``` file from ```myGitHooks```.
+  - Copy ```pre-commit``` file depending on your OS from ```myGitHooks```.
   - Paste it into ```.git/hooks``` in your project.
 - Now each time you commit your changes, ```ktlintFormat``` and  ```ktlintCheck``` will automatically run
 
