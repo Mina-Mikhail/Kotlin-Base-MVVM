@@ -4,15 +4,35 @@ Android Clean Architecture
 
 
 <div align="center">
-<a name="open_source"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102?style=for-the-badge"></a>
-<a name="platform"><img src="https://img.shields.io/badge/platform-Android-blue.svg?style=for-the-badge"></a>
-<a name="stars"><img src="https://img.shields.io/github/stars/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge"></a>
-<a name="forks"><img src="https://img.shields.io/github/forks/Mina-Mikhail/Kotlin-Base-MVVM?logoColor=green&style=for-the-badge"></a>
-<a name="contributions"><img src="https://img.shields.io/github/contributors/Mina-Mikhail/Kotlin-Base-MVVM?logoColor=green&style=for-the-badge"></a>
-<a name="last_commit"><img src="https://img.shields.io/github/last-commit/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge"></a>
-<a name="issues"><img src="https://img.shields.io/github/issues-raw/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge"></a>
-<a name="license"><img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
-<a name="linked_in" href="https://www.linkedin.com/in/minasamirgerges/"><img src="https://img.shields.io/badge/Support-Recommed%2FEndorse%20me%20on%20Linkedin-yellow?style=for-the-badge&logo=linkedin" alt="Recommend me on LinkedIn" /></a>
+<a name="open_source">
+  <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102?style=for-the-badge">
+</a>
+<a name="codefactor" href="https://www.codefactor.io/repository/github/mina-mikhail/kotlin-base-mvvm">
+  <img src="https://www.codefactor.io/repository/github/mina-mikhail/kotlin-base-mvvm/badge?style=for-the-badge">
+</a>  
+<a name="platform">
+  <img src="https://img.shields.io/badge/platform-Android-blue.svg?style=for-the-badge">
+</a>
+<a name="stars">
+  <img src="https://img.shields.io/github/stars/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge"></a>
+<a name="forks">
+  <img src="https://img.shields.io/github/forks/Mina-Mikhail/Kotlin-Base-MVVM?logoColor=green&style=for-the-badge">
+</a>
+<a name="contributions">
+  <img src="https://img.shields.io/github/contributors/Mina-Mikhail/Kotlin-Base-MVVM?logoColor=green&style=for-the-badge">
+</a>
+<a name="last_commit">
+  <img src="https://img.shields.io/github/last-commit/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge">
+</a>
+<a name="issues">
+  <img src="https://img.shields.io/github/issues-raw/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge">
+</a>
+<a name="license">
+  <img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge">
+</a>
+<a name="linked_in" href="https://www.linkedin.com/in/minasamirgerges/">
+  <img src="https://img.shields.io/badge/Support-Recommed%2FEndorse%20me%20on%20Linkedin-yellow?style=for-the-badge&logo=linkedin" alt="Recommend me on LinkedIn"/>
+</a>
 </div>
 
 
