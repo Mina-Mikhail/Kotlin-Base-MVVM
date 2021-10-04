@@ -166,7 +166,7 @@ If this project help you reduce time to develop, you can give me a cup of coffee
 :warning: License:
 --------
 ```
-   Copyright (C) 2021 MINDORKS NEXTGEN PRIVATE LIMITED
+   Copyright (C) 2021 MINA MIKHAIL PRIVATE LIMITED
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
