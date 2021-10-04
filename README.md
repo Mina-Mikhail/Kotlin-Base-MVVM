@@ -8,7 +8,10 @@ Android Clean Architecture
 <a name="stars"><img src="https://img.shields.io/github/stars/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge"></a>
 <a name="forks"><img src="https://img.shields.io/github/forks/Mina-Mikhail/Kotlin-Base-MVVM?logoColor=green&style=for-the-badge"></a>
 <a name="contributions"><img src="https://img.shields.io/github/contributors/Mina-Mikhail/Kotlin-Base-MVVM?logoColor=green&style=for-the-badge"></a>
+<a name="last_commit"><img src="https://img.shields.io/github/last-commit/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge"></a>
+<a name="issues"><img src="https://img.shields.io/github/issues-raw/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge"></a>
 <a name="license"><img src="https://img.shields.io/github/license/sadanandpai/javascript-code-challenges?style=for-the-badge"></a>
+<a name="linked_in" href="https://www.linkedin.com/in/minasamirgerges/"><img src="https://img.shields.io/badge/Support-Recommed%2FEndorse%20me%20on%20Linkedin-yellow?style=for-the-badge&logo=linkedin" alt="Recommend me on LinkedIn" /></a>
 </div>
 
 
@@ -110,7 +113,8 @@ Android Clean Architecture
 
 :point_right: Contributing to Project:
 -----------
-- Just make pull request. You are in! :thumbsup:
+- Just fork this repository and contribute back using pull requests.
+- Any contributions, large or small, major features, bug fixes, are welcomed and appreciated but will be thoroughly reviewed .
 
 
 :point_right: Find this project useful ? :heart:
@@ -126,6 +130,13 @@ Android Clean Architecture
 :point_right: Forkers: :hammer_and_pick:
 -----------
 [![Forkers repo roster for @sadanandpai/javascript-code-challenges](https://reporoster.com/forks/Mina-Mikhail/Kotlin-Base-MVVM)](https://github.com/Mina-Mikhail/Kotlin-Base-MVVM/network/members)
+
+
+:point_right: Donation:
+-----------
+If this project help you reduce time to develop, you can give me a cup of coffee :) 
+
+<a href="https://www.buymeacoffee.com/mina.mikhail" target="_blank"><img src="https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 
 
