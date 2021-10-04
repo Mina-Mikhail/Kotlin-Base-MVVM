@@ -27,7 +27,7 @@ object RetrofitModule {
 
   @Provides
   @Singleton
-  fun provideHeadersInterceptor(appPreferences: AppPreferences, @ApplicationContext context: Context) =
+  fun provideHeadersInterceptor(appPreferences: AppPreferences) =
     Interceptor { chain ->
       chain.proceed(
         chain.request().newBuilder()

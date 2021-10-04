@@ -1,3 +1,5 @@
+import com.android.build.gradle.internal.cxx.configure.gradleLocalProperties
+
 plugins {
   id(Config.Plugins.androidApplication)
   id(Config.Plugins.kotlinAndroid)
@@ -24,6 +26,7 @@ android {
   buildTypes {
     getByName("debug") {
       resValue("string", "app_name", "Base MVVM-Test")
+      resValue("string", "google_api_key", gradleLocalProperties(rootDir).getProperty("GOOGLE_API_KEY"))
       manifestPlaceholders["appIcon"] = "@mipmap/ic_launcher_test"
       manifestPlaceholders["appRoundIcon"] = "@mipmap/ic_launcher_test_round"
 
@@ -46,6 +49,7 @@ android {
       isShrinkResources = true
 
       resValue("string", "app_name", "Base MVVM")
+      resValue("string", "google_api_key", gradleLocalProperties(rootDir).getProperty("GOOGLE_API_KEY"))
       manifestPlaceholders["appIcon"] = "@mipmap/ic_launcher"
       manifestPlaceholders["appRoundIcon"] = "@mipmap/ic_launcher_round"
 
