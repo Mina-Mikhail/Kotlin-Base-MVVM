@@ -107,6 +107,8 @@ Android Clean Architecture
 - [X] Use StateFlow in Presentation layer.
 - [X] Use UseCases.
 - [X] Handle Different Build Variants.
+- [ ] Use Ktor as network client instead of Retrofit & OKHTTP.
+- [ ] Use Data Store instead of Shared Preferences.
 - [ ] Explore full MVI implementation.
 - [ ] Add some unit tests.
 
