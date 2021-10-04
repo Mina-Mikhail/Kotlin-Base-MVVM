@@ -15,8 +15,6 @@ object Config {
     const val navigationSafeArgs =
       "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.androidNavigation}"
     const val hilt = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hiltVersion}"
-    const val googleServices = "com.google.gms:google-services:${Versions.googleServicesClassPath}"
-    const val crashlytics = "com.google.firebase:firebase-crashlytics-gradle:${Versions.crashlyticsClassPath}"
   }
 
   object Plugins {
@@ -25,8 +23,6 @@ object Config {
     const val kotlinKapt = "kotlin-kapt"
     const val navigationSafeArgs = "androidx.navigation.safeargs"
     const val hilt = "dagger.hilt.android.plugin"
-    const val googleServices = "com.google.gms.google-services"
-    const val crashlytics = "com.google.firebase.crashlytics"
     const val androidLibrary = "com.android.library"
     const val kotlinJvm = "org.jetbrains.kotlin.jvm"
     const val ktLint = "org.jlleitschuh.gradle.ktlint"

@@ -34,15 +34,8 @@ object Libraries {
   const val navigationFragment = "androidx.navigation:navigation-fragment-ktx:${Versions.androidNavigation}"
   const val navigationUI = "androidx.navigation:navigation-ui-ktx:${Versions.androidNavigation}"
   const val loadingAnimations = "com.github.ybq:Android-SpinKit:${Versions.loadingAnimations}"
-  const val alerter = "com.tapadoo.android:alerter:${Versions.alerter}"
+  const val alerter = "com.github.tapadoo:alerter:${Versions.alerter}"
   const val coil = "io.coil-kt:coil:${Versions.coil}"
-  const val gifDrawable = "pl.droidsonroids.gif:android-gif-drawable:${Versions.gif_drawable}"
-
-  // Firebase
-  const val firebaseCore = "com.google.firebase:firebase-core:${Versions.firebaseCore}"
-  const val firebaseMessaging = "com.google.firebase:firebase-messaging:${Versions.firebaseMessaging}"
-  const val firebaseIID = "com.google.firebase:firebase-iid:${Versions.firebaseIID}"
-  const val crashlytics = "com.google.firebase:firebase-crashlytics:${Versions.crashlytics}"
 
   // Utils
   const val playServices = "com.google.android.gms:play-services-auth:${Versions.playServices}"

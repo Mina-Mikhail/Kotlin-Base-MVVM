@@ -27,17 +27,8 @@ object Versions {
   const val materialDesign = "1.4.0"
   const val androidNavigation = "2.3.5"
   const val loadingAnimations = "1.4.0"
-  const val alerter = "7.0.1"
+  const val alerter = "7.2.4"
   const val coil = "1.3.2"
-  const val gif_drawable = "1.2.20"
-
-  // Firebase
-  const val firebaseCore = "19.0.0"
-  const val firebaseMessaging = "22.0.0"
-  const val firebaseIID = "21.1.0"
-  const val crashlytics = "18.2.1"
-  const val googleServicesClassPath = "4.3.10"
-  const val crashlyticsClassPath = "2.7.1"
 
   // Utils
   const val playServices = "19.2.0"
