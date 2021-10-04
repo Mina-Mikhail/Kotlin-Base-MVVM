@@ -5,6 +5,7 @@ Android Clean Architecture
 
 <div align="center">
 <a name="open_source"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102?style=for-the-badge"></a>
+<a name="platform"><img src="https://img.shields.io/badge/platform-Android-blue.svg?style=for-the-badge"></a>
 <a name="stars"><img src="https://img.shields.io/github/stars/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge"></a>
 <a name="forks"><img src="https://img.shields.io/github/forks/Mina-Mikhail/Kotlin-Base-MVVM?logoColor=green&style=for-the-badge"></a>
 <a name="contributions"><img src="https://img.shields.io/github/contributors/Mina-Mikhail/Kotlin-Base-MVVM?logoColor=green&style=for-the-badge"></a>
