@@ -7,7 +7,7 @@ Android Clean Architecture
 <a name="open_source">
   <img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=102?style=for-the-badge">
 </a>
-<a name="codefactor" href="https://www.codefactor.io/repository/github/mina-mikhail/kotlin-base-mvvm">
+<a name="code_factor" href="https://www.codefactor.io/repository/github/mina-mikhail/kotlin-base-mvvm">
   <img src="https://www.codefactor.io/repository/github/mina-mikhail/kotlin-base-mvvm/badge?style=for-the-badge">
 </a>  
 <a name="platform">
