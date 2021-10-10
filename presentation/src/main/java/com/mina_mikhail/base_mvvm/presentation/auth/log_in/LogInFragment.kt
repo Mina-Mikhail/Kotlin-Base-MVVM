@@ -147,16 +147,16 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>() {
       viewModel.logInResponse.collect {
         when (it) {
           Resource.Loading -> {
-            hideKeyboard();
-            showLoading();
+            hideKeyboard()
+            showLoading()
           }
           is Resource.Success -> {
-            hideLoading();
-            openHome();
+            hideLoading()
+            openHome()
           }
           is Resource.Failure -> {
-            hideLoading();
-            handleApiError(it, retryAction = { viewModel.onLogInClicked() });
+            hideLoading()
+            handleApiError(it, retryAction = { viewModel.onLogInClicked() })
           }
         }
       }
