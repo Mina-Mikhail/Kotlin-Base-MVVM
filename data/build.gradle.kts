@@ -29,9 +29,7 @@ dependencies {
   implementation(Libraries.retrofit)
   implementation(Libraries.gson)
 
-  // Hilt
-  implementation(Libraries.hilt)
-  kapt(Libraries.hiltDaggerCompiler)
+  implementation(Libraries.javaInject)
 
   // Project Modules
   implementation(project(Config.Modules.domain))

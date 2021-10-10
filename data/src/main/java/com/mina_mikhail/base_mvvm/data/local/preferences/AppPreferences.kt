@@ -4,10 +4,9 @@ import android.content.Context
 import android.content.SharedPreferences
 import com.google.gson.Gson
 import com.mina_mikhail.base_mvvm.domain.auth.entity.model.User
-import dagger.hilt.android.qualifiers.ApplicationContext
 import javax.inject.Inject
 
-class AppPreferences @Inject constructor(@ApplicationContext private val context: Context) {
+class AppPreferences @Inject constructor(private val context: Context) {
 
   companion object {
     private const val APP_PREFERENCES_NAME = "APP-NAME-Cache"

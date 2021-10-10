@@ -8,4 +8,5 @@ class GeneralUseCases(
   val checkFirstTimeUseCase: CheckFirstTimeUseCase,
   val checkLoggedInUserUseCase: CheckLoggedInUserUseCase,
   val setFirstTimeUseCase: SetFirstTimeUseCase,
+  val clearPreferencesUseCase: ClearPreferencesUseCase
 )

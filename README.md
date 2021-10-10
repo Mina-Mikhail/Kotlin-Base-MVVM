@@ -117,7 +117,7 @@ Android Clean Architecture
 :point_right: Local Development:
 -----------
 - Here are some useful Gradle commands for executing this example:
-  - `./gradlew clean` - Delets build directory.
+  - `./gradlew clean` - Deletes build directory.
 
 
 :point_right: TO DO:

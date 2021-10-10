@@ -1,6 +1,6 @@
 package com.mina_mikhail.base_mvvm.domain.auth.use_case
 
-import com.mina_mikhail.base_mvvm.domain.account.repository.AccountRepository
+import com.mina_mikhail.base_mvvm.domain.account.use_case.SaveUserToLocalUseCase
 import com.mina_mikhail.base_mvvm.domain.auth.entity.model.User
 import com.mina_mikhail.base_mvvm.domain.auth.entity.request.LogInRequest
 import com.mina_mikhail.base_mvvm.domain.auth.entity.request.LogInValidationException
@@ -17,7 +17,7 @@ import javax.inject.Inject
 
 class LogInUseCase @Inject constructor(
   private val authRepository: AuthRepository,
-  private val accountRepository: AccountRepository
+  private val saveUserToLocalUseCase: SaveUserToLocalUseCase
 ) {
 
   @Throws(LogInValidationException::class)
@@ -38,7 +38,7 @@ class LogInUseCase @Inject constructor(
 
     val result = authRepository.logIn(request)
     if (result is Resource.Success) {
-      accountRepository.saveUserToLocal(result.value.result)
+      saveUserToLocalUseCase(result.value.result)
     }
 
     emit(result)
