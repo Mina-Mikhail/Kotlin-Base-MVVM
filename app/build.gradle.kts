@@ -95,7 +95,3 @@ dependencies {
   implementation(project(Config.Modules.data))
   implementation(project(Config.Modules.presentation))
 }
-
-apply {
-  from("$rootDir/gradle/install-git-hooks.gradle")
-}
