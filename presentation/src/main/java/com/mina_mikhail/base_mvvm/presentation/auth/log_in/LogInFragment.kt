@@ -156,7 +156,7 @@ class LogInFragment : BaseFragment<FragmentLogInBinding>() {
           }
           is Resource.Failure -> {
             hideLoading();
-            handleApiError(it, retryAction = { viewModel.onLogInClicked() })
+            handleApiError(it, retryAction = { viewModel.onLogInClicked() });
           }
         }
       }

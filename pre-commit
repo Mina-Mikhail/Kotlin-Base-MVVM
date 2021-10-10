@@ -1,23 +1,10 @@
 #!/bin/sh
-echo "Running pre-commit checks..."
 
+echo "Checking code formatting..."
 
-OUTPUT="/tmp/analysis-result"
-./gradlew ktlintFormat ktlintCheck > ${OUTPUT}
-EXIT_CODE=$?
+./gradlew ktlintFormat ktlintCheck --daemon
 
+status=$?
 
-if [ ${EXIT_CODE} -ne 0 ]; then
-    cat ${OUTPUT}
-    rm ${OUTPUT}
-    echo "*********************************************"
-    echo "               Checks Failed!                "
-    echo "    Resolve found issues before committing   "
-    echo "*********************************************"
-    exit ${EXIT_CODE}
-else
-    rm ${OUTPUT}
-    echo "*********************************************"
-    echo "          Checks Passed Successfully!        "
-    echo "*********************************************"
-fi
+[ $status -ne 0 ] && exit 1
+exit 0
