@@ -3,7 +3,7 @@ echo "Running pre-commit checks..."
 
 
 OUTPUT="/tmp/analysis-result"
-./gradlew ktlintFormat > ${OUTPUT}
+./gradlew ktlintFormat ktlintCheck > ${OUTPUT}
 EXIT_CODE=$?
 
 
