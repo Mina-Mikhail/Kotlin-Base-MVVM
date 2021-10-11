@@ -25,10 +25,10 @@ android {
 
   buildTypes {
     getByName("debug") {
-      resValue("string", "app_name", "Base MVVM-Test")
       resValue("string", "google_api_key", gradleLocalProperties(rootDir).getProperty("GOOGLE_API_KEY"))
-      manifestPlaceholders["appIcon"] = "@mipmap/ic_launcher_test"
-      manifestPlaceholders["appRoundIcon"] = "@mipmap/ic_launcher_test_round"
+      manifestPlaceholders["appName"] = "@string/app_name_debug"
+      manifestPlaceholders["appIcon"] = "@mipmap/ic_launcher_debug"
+      manifestPlaceholders["appRoundIcon"] = "@mipmap/ic_launcher_debug_round"
 
       buildConfigField("String", "API_BASE_URL", Config.Environments.debugBaseUrl)
     }
@@ -48,8 +48,8 @@ android {
       isMinifyEnabled = true
       isShrinkResources = true
 
-      resValue("string", "app_name", "Base MVVM")
       resValue("string", "google_api_key", gradleLocalProperties(rootDir).getProperty("GOOGLE_API_KEY"))
+      manifestPlaceholders["appName"] = "@string/app_name"
       manifestPlaceholders["appIcon"] = "@mipmap/ic_launcher"
       manifestPlaceholders["appRoundIcon"] = "@mipmap/ic_launcher_round"
 

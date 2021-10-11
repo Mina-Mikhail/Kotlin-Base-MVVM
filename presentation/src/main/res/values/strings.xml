@@ -1,4 +1,7 @@
 <resources>
+  <string name="app_name_debug" translatable="false">Base-MVVM-Debug</string>
+  <string name="app_name" translatable="false">Base-MVVM</string>
+
   <!-- General Strings -->
   <string name="hide">Hide</string>
   <string name="connection_error">Connection Error</string>
