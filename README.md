@@ -11,7 +11,10 @@ Android Clean Architecture
   <img src="https://www.codefactor.io/repository/github/mina-mikhail/kotlin-base-mvvm/badge?style=for-the-badge">
 </a>  
 <a name="platform">
-  <img src="https://img.shields.io/badge/platform-Android-blue.svg?style=for-the-badge">
+  <img src="https://img.shields.io/badge/Platform-Android-success?style=for-the-badge">
+</a>
+<a name="language">
+  <img src="https://img.shields.io/badge/Language-Kotlin---?style=for-the-badge">
 </a>
 <a name="stars">
   <img src="https://img.shields.io/github/stars/Mina-Mikhail/Kotlin-Base-MVVM?style=for-the-badge"></a>
